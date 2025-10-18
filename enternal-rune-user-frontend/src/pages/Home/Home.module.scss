@@ -1,0 +1,17 @@
+.marqueeInner {
+    animation: marqueeScroll 15s linear infinite;
+}
+
+.marqueeInnerTestimonials {
+    animation: marqueeScroll 35s linear infinite;
+}
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
