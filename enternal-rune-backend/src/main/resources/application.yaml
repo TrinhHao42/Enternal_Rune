@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: enternal-rune-backend
+
+  jpa:
+    hibernate:
+      ddl-auto: update
