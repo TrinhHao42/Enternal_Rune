@@ -1,9 +1,9 @@
 import React from 'react'
-
-const WarrantyAndReturnPolicyScreen = () => {
+import WarrantyAndReturnPolicyScreen from '../../pages/WarrantyAndReturnPolicy/WarrantyAndReturnPolicyScreen'
+const WarrantyAndReturnPolicyPage = () => {
   return (
     <div><WarrantyAndReturnPolicyScreen /></div>
   )
 }
 
-export default WarrantyAndReturnPolicyScreen
+export default WarrantyAndReturnPolicyPage
