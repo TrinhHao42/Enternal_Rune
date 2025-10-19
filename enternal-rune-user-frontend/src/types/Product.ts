@@ -1,3 +1,5 @@
+import { Image } from "./Image";
+
 // Define the Product interface based on the JSON structure
 export type Product = {
   prodId: number;
@@ -6,7 +8,7 @@ export type Product = {
   prodModel: string;
   prodVersion: string[];
   prodColor: string[];
-  prodImgUrl: string[];
+  prodImgUrl: Image[];
   prodDescription: string;
   prodStatus: string;
   prodRating: number;

@@ -1,4 +1,4 @@
-import Address from "./Address";
+import Address from "../../types/Address";
 
 enum Role {
     USER = "USER",

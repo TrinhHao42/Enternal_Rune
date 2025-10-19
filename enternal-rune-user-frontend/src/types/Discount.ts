@@ -1,15 +1,7 @@
-enum TargetType {
-    ORDER = 'ORDER',
-    PRODUCT = 'PRODUCT',
-    EVENT = 'EVENT'
-} 
+import { TargetType } from "@/types/enums/DiscountTargetType";
+import { ValueType } from "@/types/enums/DiscountValueType";
 
-enum ValueType {
-    FIXED = 'FIXED',
-    PERCENT = 'PERCENT'
-}
-
-type Discount = {
+export type Discount = {
     discountName: string
     discountCode: string
     discountTarget: TargetType
@@ -20,5 +12,3 @@ type Discount = {
     discountEndDate: Date
     discountQuantityLimit?: number
 }
-
-export default Discount;

@@ -1,4 +1,4 @@
-import Address from "./Address"
+import Address from "../../types/Address"
 import OrderDetail from "./OrderDetail"
 import User from "./User"
 

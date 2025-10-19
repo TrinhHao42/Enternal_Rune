@@ -1,4 +1,4 @@
-import Brand from "./Brand"
+import Brand from "../../types/Brand"
 import ProductPrice from "./ProductPrice"
 
 type Image = {
