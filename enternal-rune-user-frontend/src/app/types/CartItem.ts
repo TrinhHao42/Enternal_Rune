@@ -1,7 +1,8 @@
-import Product from "./Product";
+import { ProductVariant } from "@/types/ProductVariant";
 
 type CartItem = {
-    ciProduct: Product
+    ciId: number,
+    ciProductVariant: ProductVariant
     ciQuantity: number
 }
 
