@@ -1,7 +1,28 @@
 spring:
   application:
     name: enternal-rune-backend
+  # config connect with mariaDB
+  datasource:
+    #    url: jdbc:mariadb://mariadb:3306/Cellphones
+    url: jdbc:mariadb://localhost:3306/Cellphones
+    username: root
+    password:
+    driver-class-name: org.mariadb.jdbc.Driver
 
+  # config connect with redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  # config for JPA
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+
+server:
+  port: 8080
