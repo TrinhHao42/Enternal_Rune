@@ -1,0 +1,2586 @@
+[
+  {
+    "ppId": 1,
+    "ppPrice": 7090000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-13",
+    "ppEndDate": null,
+    "ppProduct": 1
+  },
+  {
+    "ppId": 2,
+    "ppPrice": 3090000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-16",
+    "ppEndDate": null,
+    "ppProduct": 2
+  },
+  {
+    "ppId": 3,
+    "ppPrice": 4290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-25",
+    "ppEndDate": null,
+    "ppProduct": 3
+  },
+  {
+    "ppId": 4,
+    "ppPrice": 7590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-21",
+    "ppEndDate": null,
+    "ppProduct": 4
+  },
+  {
+    "ppId": 5,
+    "ppPrice": 3600000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-09",
+    "ppEndDate": null,
+    "ppProduct": 5
+  },
+  {
+    "ppId": 6,
+    "ppPrice": 2790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-23",
+    "ppEndDate": null,
+    "ppProduct": 6
+  },
+  {
+    "ppId": 7,
+    "ppPrice": 4150000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-23",
+    "ppEndDate": null,
+    "ppProduct": 7
+  },
+  {
+    "ppId": 8,
+    "ppPrice": 9310000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-16",
+    "ppEndDate": null,
+    "ppProduct": 8
+  },
+  {
+    "ppId": 9,
+    "ppPrice": 3350000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-13",
+    "ppEndDate": null,
+    "ppProduct": 9
+  },
+  {
+    "ppId": 10,
+    "ppPrice": 4690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-24",
+    "ppEndDate": null,
+    "ppProduct": 10
+  },
+  {
+    "ppId": 11,
+    "ppPrice": 6190000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-09",
+    "ppEndDate": null,
+    "ppProduct": 11
+  },
+  {
+    "ppId": 12,
+    "ppPrice": 4690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-08",
+    "ppEndDate": null,
+    "ppProduct": 12
+  },
+  {
+    "ppId": 13,
+    "ppPrice": 11490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-13",
+    "ppEndDate": null,
+    "ppProduct": 13
+  },
+  {
+    "ppId": 14,
+    "ppPrice": 1950000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-10",
+    "ppEndDate": null,
+    "ppProduct": 14
+  },
+  {
+    "ppId": 15,
+    "ppPrice": 2890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-07",
+    "ppEndDate": null,
+    "ppProduct": 15
+  },
+  {
+    "ppId": 16,
+    "ppPrice": 7540000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-02",
+    "ppEndDate": null,
+    "ppProduct": 16
+  },
+  {
+    "ppId": 17,
+    "ppPrice": 2990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-07",
+    "ppEndDate": null,
+    "ppProduct": 17
+  },
+  {
+    "ppId": 18,
+    "ppPrice": 2750000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-18",
+    "ppEndDate": null,
+    "ppProduct": 18
+  },
+  {
+    "ppId": 19,
+    "ppPrice": 4200000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-04",
+    "ppEndDate": null,
+    "ppProduct": 19
+  },
+  {
+    "ppId": 20,
+    "ppPrice": 7290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-28",
+    "ppEndDate": null,
+    "ppProduct": 20
+  },
+  {
+    "ppId": 21,
+    "ppPrice": 9290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-04",
+    "ppEndDate": null,
+    "ppProduct": 21
+  },
+  {
+    "ppId": 22,
+    "ppPrice": 3190000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-30",
+    "ppEndDate": null,
+    "ppProduct": 22
+  },
+  {
+    "ppId": 23,
+    "ppPrice": 5990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-30",
+    "ppEndDate": null,
+    "ppProduct": 23
+  },
+  {
+    "ppId": 24,
+    "ppPrice": 7390000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-19",
+    "ppEndDate": null,
+    "ppProduct": 24
+  },
+  {
+    "ppId": 25,
+    "ppPrice": 11990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-11",
+    "ppEndDate": null,
+    "ppProduct": 25
+  },
+  {
+    "ppId": 26,
+    "ppPrice": 12990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-02",
+    "ppEndDate": null,
+    "ppProduct": 26
+  },
+  {
+    "ppId": 27,
+    "ppPrice": 19490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-19",
+    "ppEndDate": null,
+    "ppProduct": 27
+  },
+  {
+    "ppId": 28,
+    "ppPrice": 30990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-18",
+    "ppEndDate": null,
+    "ppProduct": 28
+  },
+  {
+    "ppId": 29,
+    "ppPrice": 11490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-09",
+    "ppEndDate": null,
+    "ppProduct": 29
+  },
+  {
+    "ppId": 30,
+    "ppPrice": 33990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-29",
+    "ppEndDate": null,
+    "ppProduct": 30
+  },
+  {
+    "ppId": 31,
+    "ppPrice": 30990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-30",
+    "ppEndDate": null,
+    "ppProduct": 31
+  },
+  {
+    "ppId": 32,
+    "ppPrice": 44490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 32
+  },
+  {
+    "ppId": 33,
+    "ppPrice": 24290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-24",
+    "ppEndDate": null,
+    "ppProduct": 33
+  },
+  {
+    "ppId": 34,
+    "ppPrice": 22290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-17",
+    "ppEndDate": null,
+    "ppProduct": 34
+  },
+  {
+    "ppId": 35,
+    "ppPrice": 28990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-14",
+    "ppEndDate": null,
+    "ppProduct": 35
+  },
+  {
+    "ppId": 36,
+    "ppPrice": 25990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-16",
+    "ppEndDate": null,
+    "ppProduct": 36
+  },
+  {
+    "ppId": 37,
+    "ppPrice": 16990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-12",
+    "ppEndDate": null,
+    "ppProduct": 37
+  },
+  {
+    "ppId": 38,
+    "ppPrice": 16990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-11",
+    "ppEndDate": null,
+    "ppProduct": 38
+  },
+  {
+    "ppId": 39,
+    "ppPrice": 21990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-05",
+    "ppEndDate": null,
+    "ppProduct": 39
+  },
+  {
+    "ppId": 40,
+    "ppPrice": 22990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-15",
+    "ppEndDate": null,
+    "ppProduct": 40
+  },
+  {
+    "ppId": 41,
+    "ppPrice": 19990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-03",
+    "ppEndDate": null,
+    "ppProduct": 41
+  },
+  {
+    "ppId": 42,
+    "ppPrice": 13790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-17",
+    "ppEndDate": null,
+    "ppProduct": 42
+  },
+  {
+    "ppId": 43,
+    "ppPrice": 24990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-31",
+    "ppEndDate": null,
+    "ppProduct": 43
+  },
+  {
+    "ppId": 44,
+    "ppPrice": 21190000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-03",
+    "ppEndDate": null,
+    "ppProduct": 44
+  },
+  {
+    "ppId": 45,
+    "ppPrice": 15790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-03",
+    "ppEndDate": null,
+    "ppProduct": 45
+  },
+  {
+    "ppId": 46,
+    "ppPrice": 35490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-17",
+    "ppEndDate": null,
+    "ppProduct": 46
+  },
+  {
+    "ppId": 47,
+    "ppPrice": 29980000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-04",
+    "ppEndDate": null,
+    "ppProduct": 47
+  },
+  {
+    "ppId": 48,
+    "ppPrice": 27480000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-22",
+    "ppEndDate": null,
+    "ppProduct": 48
+  },
+  {
+    "ppId": 49,
+    "ppPrice": 23990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-30",
+    "ppEndDate": null,
+    "ppProduct": 49
+  },
+  {
+    "ppId": 50,
+    "ppPrice": 14390000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-27",
+    "ppEndDate": null,
+    "ppProduct": 50
+  },
+  {
+    "ppId": 51,
+    "ppPrice": 14890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-02",
+    "ppEndDate": null,
+    "ppProduct": 51
+  },
+  {
+    "ppId": 52,
+    "ppPrice": 20690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-11",
+    "ppEndDate": null,
+    "ppProduct": 52
+  },
+  {
+    "ppId": 53,
+    "ppPrice": 16690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-01",
+    "ppEndDate": null,
+    "ppProduct": 53
+  },
+  {
+    "ppId": 54,
+    "ppPrice": 24440000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-10",
+    "ppEndDate": null,
+    "ppProduct": 54
+  },
+  {
+    "ppId": 55,
+    "ppPrice": 22700000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-29",
+    "ppEndDate": null,
+    "ppProduct": 55
+  },
+  {
+    "ppId": 56,
+    "ppPrice": 29990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-28",
+    "ppEndDate": null,
+    "ppProduct": 56
+  },
+  {
+    "ppId": 57,
+    "ppPrice": 21590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-05",
+    "ppEndDate": null,
+    "ppProduct": 57
+  },
+  {
+    "ppId": 58,
+    "ppPrice": 19590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 58
+  },
+  {
+    "ppId": 59,
+    "ppPrice": 17990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-02",
+    "ppEndDate": null,
+    "ppProduct": 59
+  },
+  {
+    "ppId": 60,
+    "ppPrice": 10290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-18",
+    "ppEndDate": null,
+    "ppProduct": 60
+  },
+  {
+    "ppId": 61,
+    "ppPrice": 14990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-02",
+    "ppEndDate": null,
+    "ppProduct": 61
+  },
+  {
+    "ppId": 62,
+    "ppPrice": 22990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-26",
+    "ppEndDate": null,
+    "ppProduct": 62
+  },
+  {
+    "ppId": 63,
+    "ppPrice": 3700000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-08",
+    "ppEndDate": null,
+    "ppProduct": 63
+  },
+  {
+    "ppId": 64,
+    "ppPrice": 27990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-07",
+    "ppEndDate": null,
+    "ppProduct": 64
+  },
+  {
+    "ppId": 65,
+    "ppPrice": 9490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 65
+  },
+  {
+    "ppId": 66,
+    "ppPrice": 12990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-16",
+    "ppEndDate": null,
+    "ppProduct": 66
+  },
+  {
+    "ppId": 67,
+    "ppPrice": 20890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-01",
+    "ppEndDate": null,
+    "ppProduct": 67
+  },
+  {
+    "ppId": 68,
+    "ppPrice": 19290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-08",
+    "ppEndDate": null,
+    "ppProduct": 68
+  },
+  {
+    "ppId": 69,
+    "ppPrice": 18990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-12",
+    "ppEndDate": null,
+    "ppProduct": 69
+  },
+  {
+    "ppId": 70,
+    "ppPrice": 9790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-07",
+    "ppEndDate": null,
+    "ppProduct": 70
+  },
+  {
+    "ppId": 71,
+    "ppPrice": 7990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-02",
+    "ppEndDate": null,
+    "ppProduct": 71
+  },
+  {
+    "ppId": 72,
+    "ppPrice": 23990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-05",
+    "ppEndDate": null,
+    "ppProduct": 72
+  },
+  {
+    "ppId": 73,
+    "ppPrice": 20990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-13",
+    "ppEndDate": null,
+    "ppProduct": 73
+  },
+  {
+    "ppId": 74,
+    "ppPrice": 23590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-04",
+    "ppEndDate": null,
+    "ppProduct": 74
+  },
+  {
+    "ppId": 75,
+    "ppPrice": 21790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-05",
+    "ppEndDate": null,
+    "ppProduct": 75
+  },
+  {
+    "ppId": 76,
+    "ppPrice": 18490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-11",
+    "ppEndDate": null,
+    "ppProduct": 76
+  },
+  {
+    "ppId": 77,
+    "ppPrice": 9990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 77
+  },
+  {
+    "ppId": 78,
+    "ppPrice": 2890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-11",
+    "ppEndDate": null,
+    "ppProduct": 78
+  },
+  {
+    "ppId": 79,
+    "ppPrice": 5690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-10",
+    "ppEndDate": null,
+    "ppProduct": 79
+  },
+  {
+    "ppId": 80,
+    "ppPrice": 6990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-05",
+    "ppEndDate": null,
+    "ppProduct": 80
+  },
+  {
+    "ppId": 81,
+    "ppPrice": 4490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-02",
+    "ppEndDate": null,
+    "ppProduct": 81
+  },
+  {
+    "ppId": 82,
+    "ppPrice": 5890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-22",
+    "ppEndDate": null,
+    "ppProduct": 82
+  },
+  {
+    "ppId": 83,
+    "ppPrice": 7790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-03",
+    "ppEndDate": null,
+    "ppProduct": 83
+  },
+  {
+    "ppId": 84,
+    "ppPrice": 11190000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-05",
+    "ppEndDate": null,
+    "ppProduct": 84
+  },
+  {
+    "ppId": 85,
+    "ppPrice": 38990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-15",
+    "ppEndDate": null,
+    "ppProduct": 85
+  },
+  {
+    "ppId": 86,
+    "ppPrice": 27990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-17",
+    "ppEndDate": null,
+    "ppProduct": 86
+  },
+  {
+    "ppId": 87,
+    "ppPrice": 29990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-18",
+    "ppEndDate": null,
+    "ppProduct": 87
+  },
+  {
+    "ppId": 88,
+    "ppPrice": 45490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-07",
+    "ppEndDate": null,
+    "ppProduct": 88
+  },
+  {
+    "ppId": 89,
+    "ppPrice": 34900000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-07",
+    "ppEndDate": null,
+    "ppProduct": 89
+  },
+  {
+    "ppId": 90,
+    "ppPrice": 31790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-15",
+    "ppEndDate": null,
+    "ppProduct": 90
+  },
+  {
+    "ppId": 91,
+    "ppPrice": 24990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-06",
+    "ppEndDate": null,
+    "ppProduct": 91
+  },
+  {
+    "ppId": 92,
+    "ppPrice": 41990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-04",
+    "ppEndDate": null,
+    "ppProduct": 92
+  },
+  {
+    "ppId": 93,
+    "ppPrice": 25990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-31",
+    "ppEndDate": null,
+    "ppProduct": 93
+  },
+  {
+    "ppId": 94,
+    "ppPrice": 24490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-24",
+    "ppEndDate": null,
+    "ppProduct": 94
+  },
+  {
+    "ppId": 95,
+    "ppPrice": 21990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-08",
+    "ppEndDate": null,
+    "ppProduct": 95
+  },
+  {
+    "ppId": 96,
+    "ppPrice": 21590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-09",
+    "ppEndDate": null,
+    "ppProduct": 96
+  },
+  {
+    "ppId": 97,
+    "ppPrice": 42990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-03",
+    "ppEndDate": null,
+    "ppProduct": 97
+  },
+  {
+    "ppId": 98,
+    "ppPrice": 25990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-21",
+    "ppEndDate": null,
+    "ppProduct": 98
+  },
+  {
+    "ppId": 99,
+    "ppPrice": 50000000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 99
+  },
+  {
+    "ppId": 100,
+    "ppPrice": 50000000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-24",
+    "ppEndDate": null,
+    "ppProduct": 100
+  },
+  {
+    "ppId": 101,
+    "ppPrice": 49990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-14",
+    "ppEndDate": null,
+    "ppProduct": 101
+  },
+  {
+    "ppId": 102,
+    "ppPrice": 23990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-18",
+    "ppEndDate": null,
+    "ppProduct": 102
+  },
+  {
+    "ppId": 103,
+    "ppPrice": 29990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-17",
+    "ppEndDate": null,
+    "ppProduct": 103
+  },
+  {
+    "ppId": 104,
+    "ppPrice": 32990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-04",
+    "ppEndDate": null,
+    "ppProduct": 104
+  },
+  {
+    "ppId": 105,
+    "ppPrice": 5900000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-05",
+    "ppEndDate": null,
+    "ppProduct": 105
+  },
+  {
+    "ppId": 106,
+    "ppPrice": 9990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-09",
+    "ppEndDate": null,
+    "ppProduct": 106
+  },
+  {
+    "ppId": 107,
+    "ppPrice": 27990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-17",
+    "ppEndDate": null,
+    "ppProduct": 107
+  },
+  {
+    "ppId": 108,
+    "ppPrice": 23990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-29",
+    "ppEndDate": null,
+    "ppProduct": 108
+  },
+  {
+    "ppId": 109,
+    "ppPrice": 25990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-24",
+    "ppEndDate": null,
+    "ppProduct": 109
+  },
+  {
+    "ppId": 110,
+    "ppPrice": 22990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-27",
+    "ppEndDate": null,
+    "ppProduct": 110
+  },
+  {
+    "ppId": 111,
+    "ppPrice": 25990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-15",
+    "ppEndDate": null,
+    "ppProduct": 111
+  },
+  {
+    "ppId": 112,
+    "ppPrice": 24490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-02",
+    "ppEndDate": null,
+    "ppProduct": 112
+  },
+  {
+    "ppId": 113,
+    "ppPrice": 25490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-07",
+    "ppEndDate": null,
+    "ppProduct": 113
+  },
+  {
+    "ppId": 114,
+    "ppPrice": 21990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-10",
+    "ppEndDate": null,
+    "ppProduct": 114
+  },
+  {
+    "ppId": 115,
+    "ppPrice": 14990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-25",
+    "ppEndDate": null,
+    "ppProduct": 115
+  },
+  {
+    "ppId": 116,
+    "ppPrice": 12090000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-02",
+    "ppEndDate": null,
+    "ppProduct": 116
+  },
+  {
+    "ppId": 117,
+    "ppPrice": 19990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-08",
+    "ppEndDate": null,
+    "ppProduct": 117
+  },
+  {
+    "ppId": 118,
+    "ppPrice": 23000000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-07",
+    "ppEndDate": null,
+    "ppProduct": 118
+  },
+  {
+    "ppId": 119,
+    "ppPrice": 17490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 119
+  },
+  {
+    "ppId": 120,
+    "ppPrice": 37690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-12",
+    "ppEndDate": null,
+    "ppProduct": 120
+  },
+  {
+    "ppId": 121,
+    "ppPrice": 28790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-29",
+    "ppEndDate": null,
+    "ppProduct": 121
+  },
+  {
+    "ppId": 122,
+    "ppPrice": 34690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-16",
+    "ppEndDate": null,
+    "ppProduct": 122
+  },
+  {
+    "ppId": 123,
+    "ppPrice": 25490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-18",
+    "ppEndDate": null,
+    "ppProduct": 123
+  },
+  {
+    "ppId": 124,
+    "ppPrice": 22990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-24",
+    "ppEndDate": null,
+    "ppProduct": 124
+  },
+  {
+    "ppId": 125,
+    "ppPrice": 27990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-15",
+    "ppEndDate": null,
+    "ppProduct": 125
+  },
+  {
+    "ppId": 126,
+    "ppPrice": 20550000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-10",
+    "ppEndDate": null,
+    "ppProduct": 126
+  },
+  {
+    "ppId": 127,
+    "ppPrice": 42690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-02",
+    "ppEndDate": null,
+    "ppProduct": 127
+  },
+  {
+    "ppId": 128,
+    "ppPrice": 36990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-30",
+    "ppEndDate": null,
+    "ppProduct": 128
+  },
+  {
+    "ppId": 129,
+    "ppPrice": 30290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 129
+  },
+  {
+    "ppId": 130,
+    "ppPrice": 27790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-26",
+    "ppEndDate": null,
+    "ppProduct": 130
+  },
+  {
+    "ppId": 131,
+    "ppPrice": 29490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-20",
+    "ppEndDate": null,
+    "ppProduct": 131
+  },
+  {
+    "ppId": 132,
+    "ppPrice": 24790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-25",
+    "ppEndDate": null,
+    "ppProduct": 132
+  },
+  {
+    "ppId": 133,
+    "ppPrice": 17590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-15",
+    "ppEndDate": null,
+    "ppProduct": 133
+  },
+  {
+    "ppId": 134,
+    "ppPrice": 24590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-06",
+    "ppEndDate": null,
+    "ppProduct": 134
+  },
+  {
+    "ppId": 135,
+    "ppPrice": 15390000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-22",
+    "ppEndDate": null,
+    "ppProduct": 135
+  },
+  {
+    "ppId": 136,
+    "ppPrice": 14990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-13",
+    "ppEndDate": null,
+    "ppProduct": 136
+  },
+  {
+    "ppId": 137,
+    "ppPrice": 10990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-23",
+    "ppEndDate": null,
+    "ppProduct": 137
+  },
+  {
+    "ppId": 138,
+    "ppPrice": 12990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-25",
+    "ppEndDate": null,
+    "ppProduct": 138
+  },
+  {
+    "ppId": 139,
+    "ppPrice": 27590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-10",
+    "ppEndDate": null,
+    "ppProduct": 139
+  },
+  {
+    "ppId": 140,
+    "ppPrice": 31000000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-12",
+    "ppEndDate": null,
+    "ppProduct": 140
+  },
+  {
+    "ppId": 141,
+    "ppPrice": 23490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-04",
+    "ppEndDate": null,
+    "ppProduct": 141
+  },
+  {
+    "ppId": 142,
+    "ppPrice": 12690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 142
+  },
+  {
+    "ppId": 143,
+    "ppPrice": 41790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-03",
+    "ppEndDate": null,
+    "ppProduct": 143
+  },
+  {
+    "ppId": 144,
+    "ppPrice": 27990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 144
+  },
+  {
+    "ppId": 145,
+    "ppPrice": 35390000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-05",
+    "ppEndDate": null,
+    "ppProduct": 145
+  },
+  {
+    "ppId": 146,
+    "ppPrice": 25590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-03",
+    "ppEndDate": null,
+    "ppProduct": 146
+  },
+  {
+    "ppId": 147,
+    "ppPrice": 33990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-13",
+    "ppEndDate": null,
+    "ppProduct": 147
+  },
+  {
+    "ppId": 148,
+    "ppPrice": 24990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-06",
+    "ppEndDate": null,
+    "ppProduct": 148
+  },
+  {
+    "ppId": 149,
+    "ppPrice": 32990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-15",
+    "ppEndDate": null,
+    "ppProduct": 149
+  },
+  {
+    "ppId": 150,
+    "ppPrice": 22990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 150
+  },
+  {
+    "ppId": 151,
+    "ppPrice": 17990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-06",
+    "ppEndDate": null,
+    "ppProduct": 151
+  },
+  {
+    "ppId": 152,
+    "ppPrice": 15990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-19",
+    "ppEndDate": null,
+    "ppProduct": 152
+  },
+  {
+    "ppId": 153,
+    "ppPrice": 16290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-05",
+    "ppEndDate": null,
+    "ppProduct": 153
+  },
+  {
+    "ppId": 154,
+    "ppPrice": 13490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-08",
+    "ppEndDate": null,
+    "ppProduct": 154
+  },
+  {
+    "ppId": 155,
+    "ppPrice": 27490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-01",
+    "ppEndDate": null,
+    "ppProduct": 155
+  },
+  {
+    "ppId": 156,
+    "ppPrice": 23990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-19",
+    "ppEndDate": null,
+    "ppProduct": 156
+  },
+  {
+    "ppId": 157,
+    "ppPrice": 32990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-22",
+    "ppEndDate": null,
+    "ppProduct": 157
+  },
+  {
+    "ppId": 158,
+    "ppPrice": 28990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-04",
+    "ppEndDate": null,
+    "ppProduct": 158
+  },
+  {
+    "ppId": 159,
+    "ppPrice": 26490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-14",
+    "ppEndDate": null,
+    "ppProduct": 159
+  },
+  {
+    "ppId": 160,
+    "ppPrice": 21290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-18",
+    "ppEndDate": null,
+    "ppProduct": 160
+  },
+  {
+    "ppId": 161,
+    "ppPrice": 17690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-02",
+    "ppEndDate": null,
+    "ppProduct": 161
+  },
+  {
+    "ppId": 162,
+    "ppPrice": 20550000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-05",
+    "ppEndDate": null,
+    "ppProduct": 162
+  },
+  {
+    "ppId": 163,
+    "ppPrice": 16650000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-13",
+    "ppEndDate": null,
+    "ppProduct": 163
+  },
+  {
+    "ppId": 164,
+    "ppPrice": 8490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-09",
+    "ppEndDate": null,
+    "ppProduct": 164
+  },
+  {
+    "ppId": 165,
+    "ppPrice": 7490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-14",
+    "ppEndDate": null,
+    "ppProduct": 165
+  },
+  {
+    "ppId": 166,
+    "ppPrice": 28000000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-29",
+    "ppEndDate": null,
+    "ppProduct": 166
+  },
+  {
+    "ppId": 167,
+    "ppPrice": 30000000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-12",
+    "ppEndDate": null,
+    "ppProduct": 167
+  },
+  {
+    "ppId": 168,
+    "ppPrice": 25000000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-18",
+    "ppEndDate": null,
+    "ppProduct": 168
+  },
+  {
+    "ppId": 169,
+    "ppPrice": 10200000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-28",
+    "ppEndDate": null,
+    "ppProduct": 169
+  },
+  {
+    "ppId": 170,
+    "ppPrice": 11200000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-14",
+    "ppEndDate": null,
+    "ppProduct": 170
+  },
+  {
+    "ppId": 171,
+    "ppPrice": 11990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-19",
+    "ppEndDate": null,
+    "ppProduct": 171
+  },
+  {
+    "ppId": 172,
+    "ppPrice": 15200000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-11",
+    "ppEndDate": null,
+    "ppProduct": 172
+  },
+  {
+    "ppId": 173,
+    "ppPrice": 8290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-11",
+    "ppEndDate": null,
+    "ppProduct": 173
+  },
+  {
+    "ppId": 174,
+    "ppPrice": 12740000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-27",
+    "ppEndDate": null,
+    "ppProduct": 174
+  },
+  {
+    "ppId": 175,
+    "ppPrice": 10990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-05",
+    "ppEndDate": null,
+    "ppProduct": 175
+  },
+  {
+    "ppId": 176,
+    "ppPrice": 5490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-09",
+    "ppEndDate": null,
+    "ppProduct": 176
+  },
+  {
+    "ppId": 177,
+    "ppPrice": 10590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-11",
+    "ppEndDate": null,
+    "ppProduct": 177
+  },
+  {
+    "ppId": 178,
+    "ppPrice": 14870000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-04",
+    "ppEndDate": null,
+    "ppProduct": 178
+  },
+  {
+    "ppId": 179,
+    "ppPrice": 9490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-04",
+    "ppEndDate": null,
+    "ppProduct": 179
+  },
+  {
+    "ppId": 180,
+    "ppPrice": 24490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-04",
+    "ppEndDate": null,
+    "ppProduct": 180
+  },
+  {
+    "ppId": 181,
+    "ppPrice": 31990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-11",
+    "ppEndDate": null,
+    "ppProduct": 181
+  },
+  {
+    "ppId": 182,
+    "ppPrice": 31990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-28",
+    "ppEndDate": null,
+    "ppProduct": 182
+  },
+  {
+    "ppId": 183,
+    "ppPrice": 7990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 183
+  },
+  {
+    "ppId": 184,
+    "ppPrice": 8990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-19",
+    "ppEndDate": null,
+    "ppProduct": 184
+  },
+  {
+    "ppId": 185,
+    "ppPrice": 9990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-13",
+    "ppEndDate": null,
+    "ppProduct": 185
+  },
+  {
+    "ppId": 186,
+    "ppPrice": 12590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-08",
+    "ppEndDate": null,
+    "ppProduct": 186
+  },
+  {
+    "ppId": 187,
+    "ppPrice": 14690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-15",
+    "ppEndDate": null,
+    "ppProduct": 187
+  },
+  {
+    "ppId": 188,
+    "ppPrice": 16490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-13",
+    "ppEndDate": null,
+    "ppProduct": 188
+  },
+  {
+    "ppId": 189,
+    "ppPrice": 10490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-26",
+    "ppEndDate": null,
+    "ppProduct": 189
+  },
+  {
+    "ppId": 190,
+    "ppPrice": 14090000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-07",
+    "ppEndDate": null,
+    "ppProduct": 190
+  },
+  {
+    "ppId": 191,
+    "ppPrice": 14990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-12",
+    "ppEndDate": null,
+    "ppProduct": 191
+  },
+  {
+    "ppId": 192,
+    "ppPrice": 20290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-16",
+    "ppEndDate": null,
+    "ppProduct": 192
+  },
+  {
+    "ppId": 193,
+    "ppPrice": 14990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-03",
+    "ppEndDate": null,
+    "ppProduct": 193
+  },
+  {
+    "ppId": 194,
+    "ppPrice": 19490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-12",
+    "ppEndDate": null,
+    "ppProduct": 194
+  },
+  {
+    "ppId": 195,
+    "ppPrice": 1250000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-14",
+    "ppEndDate": null,
+    "ppProduct": 195
+  },
+  {
+    "ppId": 196,
+    "ppPrice": 2990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-03",
+    "ppEndDate": null,
+    "ppProduct": 196
+  },
+  {
+    "ppId": 197,
+    "ppPrice": 5890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-07",
+    "ppEndDate": null,
+    "ppProduct": 197
+  },
+  {
+    "ppId": 198,
+    "ppPrice": 5700000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-02",
+    "ppEndDate": null,
+    "ppProduct": 198
+  },
+  {
+    "ppId": 199,
+    "ppPrice": 9200000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-18",
+    "ppEndDate": null,
+    "ppProduct": 199
+  },
+  {
+    "ppId": 200,
+    "ppPrice": 4050000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-12",
+    "ppEndDate": null,
+    "ppProduct": 200
+  },
+  {
+    "ppId": 201,
+    "ppPrice": 9490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-19",
+    "ppEndDate": null,
+    "ppProduct": 201
+  },
+  {
+    "ppId": 202,
+    "ppPrice": 6690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-22",
+    "ppEndDate": null,
+    "ppProduct": 202
+  },
+  {
+    "ppId": 203,
+    "ppPrice": 7990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-21",
+    "ppEndDate": null,
+    "ppProduct": 203
+  },
+  {
+    "ppId": 204,
+    "ppPrice": 5490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-13",
+    "ppEndDate": null,
+    "ppProduct": 204
+  },
+  {
+    "ppId": 205,
+    "ppPrice": 4990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-27",
+    "ppEndDate": null,
+    "ppProduct": 205
+  },
+  {
+    "ppId": 206,
+    "ppPrice": 2290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-01",
+    "ppEndDate": null,
+    "ppProduct": 206
+  },
+  {
+    "ppId": 207,
+    "ppPrice": 4990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-08",
+    "ppEndDate": null,
+    "ppProduct": 207
+  },
+  {
+    "ppId": 208,
+    "ppPrice": 4990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-28",
+    "ppEndDate": null,
+    "ppProduct": 208
+  },
+  {
+    "ppId": 209,
+    "ppPrice": 4290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-10",
+    "ppEndDate": null,
+    "ppProduct": 209
+  },
+  {
+    "ppId": 210,
+    "ppPrice": 4790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-20",
+    "ppEndDate": null,
+    "ppProduct": 210
+  },
+  {
+    "ppId": 211,
+    "ppPrice": 4990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-13",
+    "ppEndDate": null,
+    "ppProduct": 211
+  },
+  {
+    "ppId": 212,
+    "ppPrice": 2990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-13",
+    "ppEndDate": null,
+    "ppProduct": 212
+  },
+  {
+    "ppId": 213,
+    "ppPrice": 4790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-22",
+    "ppEndDate": null,
+    "ppProduct": 213
+  },
+  {
+    "ppId": 214,
+    "ppPrice": 3190000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-26",
+    "ppEndDate": null,
+    "ppProduct": 214
+  },
+  {
+    "ppId": 215,
+    "ppPrice": 5490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-03",
+    "ppEndDate": null,
+    "ppProduct": 215
+  },
+  {
+    "ppId": 216,
+    "ppPrice": 4690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 216
+  },
+  {
+    "ppId": 217,
+    "ppPrice": 5490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-26",
+    "ppEndDate": null,
+    "ppProduct": 217
+  },
+  {
+    "ppId": 218,
+    "ppPrice": 12990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-18",
+    "ppEndDate": null,
+    "ppProduct": 218
+  },
+  {
+    "ppId": 219,
+    "ppPrice": 6990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-14",
+    "ppEndDate": null,
+    "ppProduct": 219
+  },
+  {
+    "ppId": 220,
+    "ppPrice": 8490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-25",
+    "ppEndDate": null,
+    "ppProduct": 220
+  },
+  {
+    "ppId": 221,
+    "ppPrice": 10490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-28",
+    "ppEndDate": null,
+    "ppProduct": 221
+  },
+  {
+    "ppId": 222,
+    "ppPrice": 3890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-10",
+    "ppEndDate": null,
+    "ppProduct": 222
+  },
+  {
+    "ppId": 223,
+    "ppPrice": 6990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-29",
+    "ppEndDate": null,
+    "ppProduct": 223
+  },
+  {
+    "ppId": 224,
+    "ppPrice": 5990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-08",
+    "ppEndDate": null,
+    "ppProduct": 224
+  },
+  {
+    "ppId": 225,
+    "ppPrice": 4990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-26",
+    "ppEndDate": null,
+    "ppProduct": 225
+  },
+  {
+    "ppId": 226,
+    "ppPrice": 3990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-21",
+    "ppEndDate": null,
+    "ppProduct": 226
+  },
+  {
+    "ppId": 227,
+    "ppPrice": 6990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-16",
+    "ppEndDate": null,
+    "ppProduct": 227
+  },
+  {
+    "ppId": 228,
+    "ppPrice": 5990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-10",
+    "ppEndDate": null,
+    "ppProduct": 228
+  },
+  {
+    "ppId": 229,
+    "ppPrice": 7990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-17",
+    "ppEndDate": null,
+    "ppProduct": 229
+  },
+  {
+    "ppId": 230,
+    "ppPrice": 6490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 230
+  },
+  {
+    "ppId": 231,
+    "ppPrice": 8990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-07",
+    "ppEndDate": null,
+    "ppProduct": 231
+  },
+  {
+    "ppId": 232,
+    "ppPrice": 6990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-24",
+    "ppEndDate": null,
+    "ppProduct": 232
+  },
+  {
+    "ppId": 233,
+    "ppPrice": 4590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-30",
+    "ppEndDate": null,
+    "ppProduct": 233
+  },
+  {
+    "ppId": 234,
+    "ppPrice": 7790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-08",
+    "ppEndDate": null,
+    "ppProduct": 234
+  },
+  {
+    "ppId": 235,
+    "ppPrice": 3390000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-29",
+    "ppEndDate": null,
+    "ppProduct": 235
+  },
+  {
+    "ppId": 236,
+    "ppPrice": 6990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-16",
+    "ppEndDate": null,
+    "ppProduct": 236
+  },
+  {
+    "ppId": 237,
+    "ppPrice": 6290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-28",
+    "ppEndDate": null,
+    "ppProduct": 237
+  },
+  {
+    "ppId": 238,
+    "ppPrice": 7290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-27",
+    "ppEndDate": null,
+    "ppProduct": 238
+  },
+  {
+    "ppId": 239,
+    "ppPrice": 4590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-16",
+    "ppEndDate": null,
+    "ppProduct": 239
+  },
+  {
+    "ppId": 240,
+    "ppPrice": 7990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-24",
+    "ppEndDate": null,
+    "ppProduct": 240
+  },
+  {
+    "ppId": 241,
+    "ppPrice": 6990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-12",
+    "ppEndDate": null,
+    "ppProduct": 241
+  },
+  {
+    "ppId": 242,
+    "ppPrice": 1990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-09",
+    "ppEndDate": null,
+    "ppProduct": 242
+  },
+  {
+    "ppId": 243,
+    "ppPrice": 2390000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-24",
+    "ppEndDate": null,
+    "ppProduct": 243
+  },
+  {
+    "ppId": 244,
+    "ppPrice": 3480000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-27",
+    "ppEndDate": null,
+    "ppProduct": 244
+  },
+  {
+    "ppId": 245,
+    "ppPrice": 4990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-29",
+    "ppEndDate": null,
+    "ppProduct": 245
+  },
+  {
+    "ppId": 246,
+    "ppPrice": 4290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-08",
+    "ppEndDate": null,
+    "ppProduct": 246
+  },
+  {
+    "ppId": 247,
+    "ppPrice": 2990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-26",
+    "ppEndDate": null,
+    "ppProduct": 247
+  },
+  {
+    "ppId": 248,
+    "ppPrice": 2790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-29",
+    "ppEndDate": null,
+    "ppProduct": 248
+  },
+  {
+    "ppId": 249,
+    "ppPrice": 3690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-18",
+    "ppEndDate": null,
+    "ppProduct": 249
+  },
+  {
+    "ppId": 250,
+    "ppPrice": 4990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-05",
+    "ppEndDate": null,
+    "ppProduct": 250
+  },
+  {
+    "ppId": 251,
+    "ppPrice": 1850000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-31",
+    "ppEndDate": null,
+    "ppProduct": 251
+  },
+  {
+    "ppId": 252,
+    "ppPrice": 2390000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-29",
+    "ppEndDate": null,
+    "ppProduct": 252
+  },
+  {
+    "ppId": 253,
+    "ppPrice": 2890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-03",
+    "ppEndDate": null,
+    "ppProduct": 253
+  },
+  {
+    "ppId": 254,
+    "ppPrice": 2990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-30",
+    "ppEndDate": null,
+    "ppProduct": 254
+  },
+  {
+    "ppId": 255,
+    "ppPrice": 3190000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-27",
+    "ppEndDate": null,
+    "ppProduct": 255
+  },
+  {
+    "ppId": 256,
+    "ppPrice": 2990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-14",
+    "ppEndDate": null,
+    "ppProduct": 256
+  },
+  {
+    "ppId": 257,
+    "ppPrice": 3450000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-06",
+    "ppEndDate": null,
+    "ppProduct": 257
+  },
+  {
+    "ppId": 258,
+    "ppPrice": 2490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-06",
+    "ppEndDate": null,
+    "ppProduct": 258
+  },
+  {
+    "ppId": 259,
+    "ppPrice": 3190000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-15",
+    "ppEndDate": null,
+    "ppProduct": 259
+  },
+  {
+    "ppId": 260,
+    "ppPrice": 3390000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-02",
+    "ppEndDate": null,
+    "ppProduct": 260
+  },
+  {
+    "ppId": 261,
+    "ppPrice": 3590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-04",
+    "ppEndDate": null,
+    "ppProduct": 261
+  },
+  {
+    "ppId": 262,
+    "ppPrice": 2890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 262
+  },
+  {
+    "ppId": 263,
+    "ppPrice": 2250000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-06",
+    "ppEndDate": null,
+    "ppProduct": 263
+  },
+  {
+    "ppId": 264,
+    "ppPrice": 2890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-17",
+    "ppEndDate": null,
+    "ppProduct": 264
+  },
+  {
+    "ppId": 265,
+    "ppPrice": 2650000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-21",
+    "ppEndDate": null,
+    "ppProduct": 265
+  },
+  {
+    "ppId": 266,
+    "ppPrice": 1800000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-24",
+    "ppEndDate": null,
+    "ppProduct": 266
+  },
+  {
+    "ppId": 267,
+    "ppPrice": 2990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-04",
+    "ppEndDate": null,
+    "ppProduct": 267
+  },
+  {
+    "ppId": 268,
+    "ppPrice": 2300000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-01",
+    "ppEndDate": null,
+    "ppProduct": 268
+  },
+  {
+    "ppId": 269,
+    "ppPrice": 3050000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-29",
+    "ppEndDate": null,
+    "ppProduct": 269
+  },
+  {
+    "ppId": 270,
+    "ppPrice": 4890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-29",
+    "ppEndDate": null,
+    "ppProduct": 270
+  },
+  {
+    "ppId": 271,
+    "ppPrice": 3190000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-03",
+    "ppEndDate": null,
+    "ppProduct": 271
+  },
+  {
+    "ppId": 272,
+    "ppPrice": 3690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-13",
+    "ppEndDate": null,
+    "ppProduct": 272
+  },
+  {
+    "ppId": 273,
+    "ppPrice": 4590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-26",
+    "ppEndDate": null,
+    "ppProduct": 273
+  },
+  {
+    "ppId": 274,
+    "ppPrice": 2750000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-28",
+    "ppEndDate": null,
+    "ppProduct": 274
+  },
+  {
+    "ppId": 275,
+    "ppPrice": 3990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-23",
+    "ppEndDate": null,
+    "ppProduct": 275
+  },
+  {
+    "ppId": 276,
+    "ppPrice": 3890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-15",
+    "ppEndDate": null,
+    "ppProduct": 276
+  },
+  {
+    "ppId": 277,
+    "ppPrice": 5390000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 277
+  },
+  {
+    "ppId": 278,
+    "ppPrice": 4690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-24",
+    "ppEndDate": null,
+    "ppProduct": 278
+  },
+  {
+    "ppId": 279,
+    "ppPrice": 4600000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-06",
+    "ppEndDate": null,
+    "ppProduct": 279
+  },
+  {
+    "ppId": 280,
+    "ppPrice": 5090000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-05",
+    "ppEndDate": null,
+    "ppProduct": 280
+  },
+  {
+    "ppId": 281,
+    "ppPrice": 3590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-02",
+    "ppEndDate": null,
+    "ppProduct": 281
+  },
+  {
+    "ppId": 282,
+    "ppPrice": 5670000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-14",
+    "ppEndDate": null,
+    "ppProduct": 282
+  },
+  {
+    "ppId": 283,
+    "ppPrice": 20190000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-16",
+    "ppEndDate": null,
+    "ppProduct": 283
+  },
+  {
+    "ppId": 284,
+    "ppPrice": 8290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-14",
+    "ppEndDate": null,
+    "ppProduct": 284
+  },
+  {
+    "ppId": 285,
+    "ppPrice": 22990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-05",
+    "ppEndDate": null,
+    "ppProduct": 285
+  },
+  {
+    "ppId": 286,
+    "ppPrice": 7490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-12",
+    "ppEndDate": null,
+    "ppProduct": 286
+  },
+  {
+    "ppId": 287,
+    "ppPrice": 9990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-22",
+    "ppEndDate": null,
+    "ppProduct": 287
+  },
+  {
+    "ppId": 288,
+    "ppPrice": 8390000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-13",
+    "ppEndDate": null,
+    "ppProduct": 288
+  },
+  {
+    "ppId": 289,
+    "ppPrice": 8530000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-22",
+    "ppEndDate": null,
+    "ppProduct": 289
+  },
+  {
+    "ppId": 290,
+    "ppPrice": 15700000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-07",
+    "ppEndDate": null,
+    "ppProduct": 290
+  },
+  {
+    "ppId": 291,
+    "ppPrice": 10300000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-14",
+    "ppEndDate": null,
+    "ppProduct": 291
+  },
+  {
+    "ppId": 292,
+    "ppPrice": 6690000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-11",
+    "ppEndDate": null,
+    "ppProduct": 292
+  },
+  {
+    "ppId": 293,
+    "ppPrice": 4500000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-18",
+    "ppEndDate": null,
+    "ppProduct": 293
+  },
+  {
+    "ppId": 294,
+    "ppPrice": 3090000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-23",
+    "ppEndDate": null,
+    "ppProduct": 294
+  },
+  {
+    "ppId": 295,
+    "ppPrice": 5290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-17",
+    "ppEndDate": null,
+    "ppProduct": 295
+  },
+  {
+    "ppId": 296,
+    "ppPrice": 3990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-19",
+    "ppEndDate": null,
+    "ppProduct": 296
+  },
+  {
+    "ppId": 297,
+    "ppPrice": 3990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-09",
+    "ppEndDate": null,
+    "ppProduct": 297
+  },
+  {
+    "ppId": 298,
+    "ppPrice": 4990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-19",
+    "ppEndDate": null,
+    "ppProduct": 298
+  },
+  {
+    "ppId": 299,
+    "ppPrice": 19990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-18",
+    "ppEndDate": null,
+    "ppProduct": 299
+  },
+  {
+    "ppId": 300,
+    "ppPrice": 11990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-17",
+    "ppEndDate": null,
+    "ppProduct": 300
+  },
+  {
+    "ppId": 301,
+    "ppPrice": 8130000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-24",
+    "ppEndDate": null,
+    "ppProduct": 301
+  },
+  {
+    "ppId": 302,
+    "ppPrice": 1890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-31",
+    "ppEndDate": null,
+    "ppProduct": 302
+  },
+  {
+    "ppId": 303,
+    "ppPrice": 2290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-08",
+    "ppEndDate": null,
+    "ppProduct": 303
+  },
+  {
+    "ppId": 304,
+    "ppPrice": 3990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-12",
+    "ppEndDate": null,
+    "ppProduct": 304
+  },
+  {
+    "ppId": 305,
+    "ppPrice": 3450000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-26",
+    "ppEndDate": null,
+    "ppProduct": 305
+  },
+  {
+    "ppId": 306,
+    "ppPrice": 3590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-16",
+    "ppEndDate": null,
+    "ppProduct": 306
+  },
+  {
+    "ppId": 307,
+    "ppPrice": 5290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-19",
+    "ppEndDate": null,
+    "ppProduct": 307
+  },
+  {
+    "ppId": 308,
+    "ppPrice": 6560000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-02",
+    "ppEndDate": null,
+    "ppProduct": 308
+  },
+  {
+    "ppId": 309,
+    "ppPrice": 5590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-01",
+    "ppEndDate": null,
+    "ppProduct": 309
+  },
+  {
+    "ppId": 310,
+    "ppPrice": 1890000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-02",
+    "ppEndDate": null,
+    "ppProduct": 310
+  },
+  {
+    "ppId": 311,
+    "ppPrice": 9990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-31",
+    "ppEndDate": null,
+    "ppProduct": 311
+  },
+  {
+    "ppId": 312,
+    "ppPrice": 22990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-03",
+    "ppEndDate": null,
+    "ppProduct": 312
+  },
+  {
+    "ppId": 313,
+    "ppPrice": 3290000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-14",
+    "ppEndDate": null,
+    "ppProduct": 313
+  },
+  {
+    "ppId": 314,
+    "ppPrice": 2590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-21",
+    "ppEndDate": null,
+    "ppProduct": 314
+  },
+  {
+    "ppId": 315,
+    "ppPrice": 4990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-15",
+    "ppEndDate": null,
+    "ppProduct": 315
+  },
+  {
+    "ppId": 316,
+    "ppPrice": 4490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-15",
+    "ppEndDate": null,
+    "ppProduct": 316
+  },
+  {
+    "ppId": 317,
+    "ppPrice": 7390000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-20",
+    "ppEndDate": null,
+    "ppProduct": 317
+  },
+  {
+    "ppId": 318,
+    "ppPrice": 6550000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-08-31",
+    "ppEndDate": null,
+    "ppProduct": 318
+  },
+  {
+    "ppId": 319,
+    "ppPrice": 5790000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-16",
+    "ppEndDate": null,
+    "ppProduct": 319
+  },
+  {
+    "ppId": 320,
+    "ppPrice": 6990000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-05",
+    "ppEndDate": null,
+    "ppProduct": 320
+  },
+  {
+    "ppId": 321,
+    "ppPrice": 8490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-10-16",
+    "ppEndDate": null,
+    "ppProduct": 321
+  },
+  {
+    "ppId": 322,
+    "ppPrice": 7590000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-17",
+    "ppEndDate": null,
+    "ppProduct": 322
+  },
+  {
+    "ppId": 323,
+    "ppPrice": 6490000,
+    "ppPriceStatus": "ACTIVE",
+    "ppStartDate": "2025-09-11",
+    "ppEndDate": null,
+    "ppProduct": 323
+  }
+]
