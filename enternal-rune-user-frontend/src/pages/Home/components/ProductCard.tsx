@@ -4,7 +4,7 @@ import { Star, ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 
 
-export default function ProductCard({product}: {product: Product}) {
+export default function ProductCard({ product }: { product: Product }) {
     const originalPrice = product.prodOriginalPrice || (product.prodPrice ? product.prodPrice * 1.15 : 0);
 
     return (
@@ -40,25 +40,29 @@ export default function ProductCard({product}: {product: Product}) {
                 <h2 className="flex flex-col justify-center text-base font-bold text-gray-900 mb-2 h-12 line-clamp-2 overflow-hidden text-ellipsis group-hover:text-blue-600 transition-colors leading-6">
                     {product.prodName}
                 </h2>
-
                 <p className="text-gray-500 text-sm mb-2 capitalize h-5 w-[90%] line-clamp-1 overflow-hidden text-ellipsis">
                     {product.prodDescription}
                 </p>
-
-                {/* Rating */}
                 <div className="flex items-center gap-2 mb-3">
                     <div className="flex gap-0.5">
                         {[1, 2, 3, 4, 5].map((i) => (
-                            <Star key={i} className={`w-4 h-4 ${i <= 4 ? 'text-yellow-400 fill-yellow-400' : 'text-gray-200 fill-gray-200'}`} />
+                            <Star
+                                key={i}
+                                className={`w-4 h-4 ${i <= Math.floor(product.prodRating)
+                                    ? 'text-yellow-400 fill-yellow-400'
+                                    : i - product.prodRating < 1 && i > product.prodRating
+                                        ? 'text-yellow-400 fill-yellow-200/50'
+                                        : 'text-gray-200 fill-gray-200'
+                                    }`}
+                            />
                         ))}
                     </div>
-                    <span className="text-gray-500 text-sm">({product.prodRating})</span>
+                    <span className="text-gray-500 text-sm">({product.prodRating.toFixed(1)})</span>
                     <div className="ml-auto">
                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                     </div>
                 </div>
 
-                {/* Price */}
                 <div className="flex items-center justify-between mb-3">
                     <div>
                         <div className="text-lg font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
@@ -68,7 +72,7 @@ export default function ProductCard({product}: {product: Product}) {
                             {formatPrice(originalPrice)}
                         </div>
                     </div>
-                    
+
                     <div className="text-right">
                         <div className="text-xs text-gray-500">Tiết kiệm</div>
                         <div className="text-sm font-semibold text-red-500">
@@ -77,19 +81,16 @@ export default function ProductCard({product}: {product: Product}) {
                     </div>
                 </div>
 
-                {/* Actions */}
                 <div className="flex gap-2">
                     <button className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2 px-3 rounded-xl font-semibold text-sm hover:from-blue-600 hover:to-blue-700 transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2 group/btn">
                         <ShoppingCart className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
                         <span>Mua ngay</span>
                     </button>
-                    
+
                     <button className="bg-blue-50 text-blue-600 py-2 px-3 rounded-xl font-semibold text-sm hover:bg-blue-100 transition-all duration-300 border border-blue-200 hover:border-blue-300">
                         So sánh
                     </button>
                 </div>
-
-                {/* Features */}
                 <div className="mt-3 flex flex-wrap gap-2">
                     <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Miễn phí giao hàng</span>
                     <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Bảo hành 12 tháng</span>
