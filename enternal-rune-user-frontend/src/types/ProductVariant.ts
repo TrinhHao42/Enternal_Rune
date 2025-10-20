@@ -6,6 +6,7 @@ export type ProductVariant = {
     prodvProduct: number;
     prodvName: string;
     prodvImage: Image;
+    prodvModel: string;
     prodvVersion: string;
     prodvColor: string;
     prodvPrice: ProductPrice;
