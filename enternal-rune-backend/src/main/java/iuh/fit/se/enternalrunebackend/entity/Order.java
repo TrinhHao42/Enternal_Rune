@@ -43,8 +43,8 @@ public class Order {
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     List<OrderRefundRequest> orderRefundRequests = new ArrayList<>();
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
-    List<Transaction> transactions = new ArrayList<>();
+    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+    Transaction transactions;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     List<OrderDetail> orderDetails = new ArrayList<>();
