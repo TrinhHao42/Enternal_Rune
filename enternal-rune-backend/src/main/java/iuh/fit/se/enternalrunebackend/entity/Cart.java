@@ -26,17 +26,6 @@ public class Cart {
 
     @OneToMany(mappedBy = "ciCart", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<CartItem> items = new ArrayList<>();
-    public Integer totalAmount() {
-        if (items == null || items.isEmpty()) {
-            return 0;
-        }
-        return items.stream()
-                .mapToInt(item -> {
-                    double price = item.getCiProduct() != null ? item.getCiProduct().productPrice.getPpPrice() : 0;
-                    long quantity = item.getCiQuantity() != 0 ? item.getCiQuantity() : 1;
-                    return (int) (price * quantity);
-                })
-                .sum();
-    }
+    
 
 }

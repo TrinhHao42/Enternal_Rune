@@ -51,10 +51,6 @@ public class Product {
     @JoinColumn(name = "brand_id", nullable = false)
     Brand prodBrand;
 
-    @ManyToOne
-    @JoinColumn(name = "pp_id")
-    public ProductPrice productPrice;
-
     @OneToMany(mappedBy = "ciProduct", cascade = CascadeType.ALL, orphanRemoval = true)
     List<CartItem> cartItems;
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)

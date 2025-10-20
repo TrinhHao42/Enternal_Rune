@@ -18,7 +18,7 @@ public class Image {
     int imageId;
     @Column(name = "image_name")
     String imageName;
-    @Column(name="image_data",columnDefinition = "LONGTEXT")
+    @Column(name="image_data",columnDefinition = "TEXT")
     @Lob
     String imageData;
     @ManyToOne
