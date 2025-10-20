@@ -9,7 +9,35 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'cellphones.com.vn',
+      },
+       {
+        protocol: 'https',
         hostname: 'cdn2.cellphones.com.vn',
+      },
+      {
+        protocol: 'https',
+        hostname: 'skiesandscopes.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn-media.sforum.vn',
+      },
+      {
+        protocol: 'https',
+        hostname: 'hienlaptop.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'crystalpng.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.vivosmartphone.vn',
+      },
+      {
+        protocol: 'https',
+        hostname: 'encrypted-tbn0.gstatic.com',
       },
     ],
   },

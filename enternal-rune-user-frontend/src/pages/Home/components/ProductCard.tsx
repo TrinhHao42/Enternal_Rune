@@ -1,70 +1,98 @@
+import { formatPrice } from '@/lib/format';
 import { Product } from '@/types/Product';
 import { Star, ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 
-function formatPrice(price: number) {
-    return price.toLocaleString("vi-VN") + "đ"
-}
 
 export default function ProductCard({product}: {product: Product}) {
     const originalPrice = product.prodOriginalPrice || (product.prodPrice ? product.prodPrice * 1.15 : 0);
 
     return (
-        <div className="cursor-pointer w-full max-w-75 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
-            style={{ borderRadius: '8px', border: '1px solid rgba(225, 225, 225, 0.40)' }}>
+        <div className="group cursor-pointer w-full bg-white overflow-hidden rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500">
             {/* Image Container */}
-            <div className="relative p-4">
+            <div className="relative p-4 bg-gradient-to-br from-blue-50 to-white group-hover:from-blue-100 group-hover:to-blue-50 transition-colors duration-300">
                 <Image
-                    src={product.prodImgUrl[0] || "/images/iphone.png"}
+                    src={product.prodImgUrl[0].imageData || "/images/iphone.png"}
                     alt={product.prodName}
-                    className="mx-auto w-40 h-40 object-contain rounded-2xl"
-                    width={160}
-                    height={160}
+                    className="mx-auto w-32 h-32 object-contain rounded-2xl group-hover:scale-110 transition-transform duration-500"
+                    width={128}
+                    height={128}
                 />
 
-                {/* Decorative icons */}
-                <div className="absolute top-3 left-3 flex items-center gap-1">
-                    <div className="relative">
-                        <Star className="w-5 h-5 text-blue-500 fill-blue-500" />
-                        <Star className="w-3 h-3 text-blue-400 fill-blue-400 absolute -top-1 -right-1 animate-pulse" />
-                    </div>
+                {/* New/Hot Badge */}
+                <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                    NEW
+                </div>
+
+                {/* Favorite Button */}
+                <button className="absolute top-4 right-4 w-8 h-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-red-50">
+                    <Star className="w-4 h-4 text-gray-400 hover:text-red-500 hover:fill-red-500 transition-colors" />
+                </button>
+
+                {/* Quick View */}
+                <div className="absolute inset-x-4 bottom-4 bg-white/90 backdrop-blur-sm rounded-xl p-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <p className="text-xs text-center text-gray-600 font-medium">Nhấn để xem chi tiết</p>
                 </div>
             </div>
 
             {/* Content */}
             <div className="p-4">
-                <h2 className="text-[16px] font-semibold leading-[24px] text-[#000] mb-1">
+                <h2 className="flex flex-col justify-center text-base font-bold text-gray-900 mb-2 h-12 line-clamp-2 overflow-hidden text-ellipsis group-hover:text-blue-600 transition-colors leading-6">
                     {product.prodName}
                 </h2>
 
-                <p className="text-gray-500 text-sm mb-2 leading-5">{product.prodModel}</p>
+                <p className="text-gray-500 text-sm mb-2 capitalize h-5 w-[90%] line-clamp-1 overflow-hidden text-ellipsis">
+                    {product.prodDescription}
+                </p>
 
                 {/* Rating */}
-                <div className="flex items-center gap-1 mb-3">
+                <div className="flex items-center gap-2 mb-3">
                     <div className="flex gap-0.5">
-                        {[1, 2, 3, 4].map((i) => (
-                            <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                        {[1, 2, 3, 4, 5].map((i) => (
+                            <Star key={i} className={`w-4 h-4 ${i <= 4 ? 'text-yellow-400 fill-yellow-400' : 'text-gray-200 fill-gray-200'}`} />
                         ))}
-                        <Star className="w-4 h-4 text-gray-300 fill-gray-300" />
                     </div>
-                    <span className="text-gray-500 text-xs">({product.prodRating})</span>
+                    <span className="text-gray-500 text-sm">({product.prodRating})</span>
+                    <div className="ml-auto">
+                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    </div>
                 </div>
 
                 {/* Price */}
-                <div className="flex items-end justify-between">
+                <div className="flex items-center justify-between mb-3">
                     <div>
-                        <div className="text-base font-semibold text-gray-900 leading-6 mb-0.5">
+                        <div className="text-lg font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                             {formatPrice(product.prodPrice || 0)}
                         </div>
-                        <div className="text-gray-400 line-through text-xs">
+                        <div className="text-gray-400 line-through text-sm">
                             {formatPrice(originalPrice)}
                         </div>
                     </div>
+                    
+                    <div className="text-right">
+                        <div className="text-xs text-gray-500">Tiết kiệm</div>
+                        <div className="text-sm font-semibold text-red-500">
+                            {Math.round(((originalPrice - (product.prodPrice || 0)) / originalPrice) * 100)}%
+                        </div>
+                    </div>
+                </div>
 
-                    {/* Cart Button */}
-                    <button className="p-2 rounded-full flex items-center gap-2.5 text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110" style={{ backgroundColor: '#DC2626' }}>
-                        <ShoppingCart className="w-5 h-5" />
+                {/* Actions */}
+                <div className="flex gap-2">
+                    <button className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2 px-3 rounded-xl font-semibold text-sm hover:from-blue-600 hover:to-blue-700 transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2 group/btn">
+                        <ShoppingCart className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
+                        <span>Mua ngay</span>
                     </button>
+                    
+                    <button className="bg-blue-50 text-blue-600 py-2 px-3 rounded-xl font-semibold text-sm hover:bg-blue-100 transition-all duration-300 border border-blue-200 hover:border-blue-300">
+                        So sánh
+                    </button>
+                </div>
+
+                {/* Features */}
+                <div className="mt-3 flex flex-wrap gap-2">
+                    <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Miễn phí giao hàng</span>
+                    <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Bảo hành 12 tháng</span>
                 </div>
             </div>
         </div>
