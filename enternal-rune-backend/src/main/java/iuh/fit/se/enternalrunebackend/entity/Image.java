@@ -9,7 +9,7 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @Setter
 @Entity
-@Table(name="image")
+@Table(name="images")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Image {
     @Id

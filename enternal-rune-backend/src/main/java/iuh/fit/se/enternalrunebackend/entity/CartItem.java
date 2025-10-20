@@ -9,7 +9,7 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "cart_item")
+@Table(name = "cart_items")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class CartItem {
     @Id
@@ -23,6 +23,6 @@ public class CartItem {
     @JoinColumn(name="cart_id")
     Cart ciCart;
     @ManyToOne
-    @JoinColumn(name="product_id")
-    Product ciProduct;
+    @JoinColumn(name="product_variant_id")
+    Product ciProductVariant;
 }
