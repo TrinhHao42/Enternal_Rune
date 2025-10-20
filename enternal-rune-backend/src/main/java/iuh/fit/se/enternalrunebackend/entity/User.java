@@ -54,5 +54,4 @@ public class User {
 
     @OneToMany(mappedBy = "cmUser", cascade = CascadeType.ALL)
     List<Comment> comments;
-
 }
