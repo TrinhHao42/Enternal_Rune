@@ -57,10 +57,10 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     fetchCart();
   }, []);
 
-  useEffect(() => {
-    if (!initialized) return;
-    if (cartItems.length > 0) debouncedUpdate();
-  }, [cartItems]);
+  // useEffect(() => {
+  //   if (!initialized) return;
+  //   if (cartItems.length > 0) debouncedUpdate();
+  // }, [cartItems]);
 
   const addCartItem = (item: CartItem) => {
     setCartItems((prev) => {
