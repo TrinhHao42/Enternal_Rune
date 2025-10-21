@@ -51,6 +51,12 @@ import HorizontaLDots from "./horizontal-dots.svg";
 import ChatIcon from "./chat.svg";
 import MoreDotIcon from "./more-dot.svg";
 import BellIcon from "./bell.svg";
+import SearchIcon from "./search.svg";
+import PhoneIcon from "./phone.svg";
+import VideoCallIcon from "./video-call.svg";
+import EmojiIcon from "./emoji.svg";
+import PaperClipIcon from "./paper-clip.svg";
+import MicrophoneIcon from "./microphone.svg";
 
 export {
   DownloadIcon,
@@ -106,4 +112,10 @@ export {
   HorizontaLDots,
   ChevronUpIcon,
   ChatIcon,
+  SearchIcon,
+  PhoneIcon,
+  VideoCallIcon,
+  EmojiIcon,
+  PaperClipIcon,
+  MicrophoneIcon,
 };
