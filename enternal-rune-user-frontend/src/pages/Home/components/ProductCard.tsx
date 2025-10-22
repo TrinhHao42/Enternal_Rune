@@ -2,13 +2,15 @@ import { formatPrice } from '@/lib/format';
 import { Product } from '@/types/Product';
 import { Star, ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 export default function ProductCard({ product }: { product: Product }) {
     const originalPrice = product.prodOriginalPrice || (product.prodPrice ? product.prodPrice * 1.15 : 0);
 
     return (
-        <div className="group cursor-pointer w-full bg-white overflow-hidden rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500">
+        <Link href={`/products/${product.prodId}`} className="block">
+            <div className="group cursor-pointer w-full bg-white overflow-hidden rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500">
             {/* Image Container */}
             <div className="relative p-4 bg-gradient-to-br from-blue-50 to-white group-hover:from-blue-100 group-hover:to-blue-50 transition-colors duration-300">
                 <Image
@@ -97,5 +99,6 @@ export default function ProductCard({ product }: { product: Product }) {
                 </div>
             </div>
         </div>
+        </Link>
     );
 }

@@ -15,12 +15,5 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-
-qr:
-  acc: 0889323138
-  bank: VPBank
-  template: qronly
-  download: true
-
 server:
   port: 8080

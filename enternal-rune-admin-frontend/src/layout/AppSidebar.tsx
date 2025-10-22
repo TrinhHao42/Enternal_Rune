@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useSidebar } from "../context/SidebarContext";
 import {
   BoltIcon,
+  ChatIcon,
   ChevronDownIcon,
   GridIcon,
   HorizontaLDots,
@@ -71,6 +72,10 @@ const navItems: NavItem[] = [
     { name: "Danh sách nhân viên", path: "/staff", pro: false },
     { name: "Phân quyền", path: "/roles", pro: false },
   ],
+},{
+  icon: <ChatIcon />,
+  name: "Chăm sóc khách hàng",
+  path: "/customer-support",
 },
 ];
 
