@@ -160,7 +160,7 @@ export default function CategoryMetrics() {
       />
 
       <MetricCard
-        title="Sản phẩm đang hoạt động"
+        title="SP đang hoạt động"
         value="1,847"
         trend="up"
         trendValue="12.5%"
