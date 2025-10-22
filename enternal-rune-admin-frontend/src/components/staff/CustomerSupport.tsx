@@ -1,19 +1,28 @@
 "use client";
-import React, { useEffect, useState, useRef } from 'react';
-import Image from 'next/image';
-import { 
-  SearchIcon, 
-  PhoneIcon, 
-  VideoCallIcon, 
-  HorizontaLDots,
+import React, { useEffect, useState, useRef } from "react";
+import Image from "next/image";
+import {
+  SearchIcon,
   EmojiIcon,
   PaperClipIcon,
   MicrophoneIcon,
-  PaperPlaneIcon
-} from '@/icons';
+  PaperPlaneIcon,
+} from "@/icons";
+
+// Kiểu dữ liệu cho chat items
+type Chat = {
+  id: number;
+  name: string;
+  role: string;
+  lastMessage: string;
+  time: string;
+  avatar: string;
+  isOnline: boolean;
+  unreadCount: number;
+};
 
 // Mock data cho danh sách chat
-const chatList = [
+const chatList: Chat[] = [
   {
     id: 1,
     name: "Lindsey Curtis",
@@ -22,7 +31,7 @@ const chatList = [
     time: "15 mins",
     avatar: "/images/user/user-01.jpg",
     isOnline: true,
-    unreadCount: 2
+    unreadCount: 2,
   },
   {
     id: 2,
@@ -32,7 +41,7 @@ const chatList = [
     time: "30 mins",
     avatar: "/images/user/user-02.jpg",
     isOnline: true,
-    unreadCount: 0
+    unreadCount: 0,
   },
   {
     id: 3,
@@ -42,7 +51,7 @@ const chatList = [
     time: "45 mins",
     avatar: "/images/user/user-03.jpg",
     isOnline: false,
-    unreadCount: 1
+    unreadCount: 1,
   },
   {
     id: 4,
@@ -52,7 +61,7 @@ const chatList = [
     time: "2 days",
     avatar: "/images/user/user-04.jpg",
     isOnline: true,
-    unreadCount: 0
+    unreadCount: 0,
   },
   {
     id: 5,
@@ -62,8 +71,8 @@ const chatList = [
     time: "1 hour",
     avatar: "/images/user/user-05.jpg",
     isOnline: false,
-    unreadCount: 3
-  } ,
+    unreadCount: 3,
+  },
   {
     id: 6,
     name: "David Brown",
@@ -72,7 +81,7 @@ const chatList = [
     time: "1 hour",
     avatar: "/images/user/user-05.jpg",
     isOnline: false,
-    unreadCount: 3
+    unreadCount: 3,
   },
   {
     id: 7,
@@ -82,7 +91,7 @@ const chatList = [
     time: "1 hour",
     avatar: "/images/user/user-05.jpg",
     isOnline: false,
-    unreadCount: 3
+    unreadCount: 3,
   },
 ];
 
@@ -94,14 +103,14 @@ const messages = [
     content: "I want to make an appointment tomorrow from 2:00 to 5:00pm?",
     time: "2 hours ago",
     isOwn: false,
-    avatar: "/images/user/user-01.jpg"
+    avatar: "/images/user/user-01.jpg",
   },
   {
     id: 2,
     sender: "You",
     content: "If don't like something, I'll stay away from it.",
     time: "2 hours ago",
-    isOwn: true
+    isOwn: true,
   },
   {
     id: 3,
@@ -109,179 +118,235 @@ const messages = [
     content: "I want more detailed information.",
     time: "2 hours ago",
     isOwn: false,
-    avatar: "/images/user/user-01.jpg"
+    avatar: "/images/user/user-01.jpg",
   },
   {
     id: 4,
     sender: "You",
     content: "If don't like something, I'll stay away from it.",
     time: "2 hours ago",
-    isOwn: true
+    isOwn: true,
   },
   {
     id: 5,
     sender: "You",
     content: "They got there early and got really good seats",
     time: "2 hours ago",
-    isOwn: true
+    isOwn: true,
   },
   {
     id: 6,
     sender: "You",
     content: "They got there early and got really good seats",
     time: "2 hours ago",
-    isOwn: true
+    isOwn: true,
   },
   {
     id: 7,
     sender: "You",
     content: "They got there early and got really good seats",
     time: "2 hours ago",
-    isOwn: true
+    isOwn: true,
   },
-  
+
   {
     id: 8,
     sender: "You",
     content: "They got there early and got really good seats",
     time: "2 hours ago",
-    isOwn: true
-  } ,
+    isOwn: true,
+  },
   {
     id: 9,
     sender: "You",
     content: "They got there early and got really good seats",
     time: "2 hours ago",
-    isOwn: true
+    isOwn: true,
   },
   {
     id: 10,
     sender: "You",
     content: "They got there early and got really good seats",
     time: "2 hours ago",
-    isOwn: true
-  }
+    isOwn: true,
+  },
 ];
 
 export default function CustomerSupport() {
-  const [selectedChat, setSelectedChat] = useState(chatList[0]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [messageInput, setMessageInput] = useState('');
+  const [selectedChat, setSelectedChat] = useState<Chat>(chatList[0]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [messageInput, setMessageInput] = useState("");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [showChatView, setShowChatView] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  // Set initial state based on screen size
   useEffect(() => {
-    // Tắt scroll body toàn trang
-    const body = document.body;
-    body.classList.add('overflow-hidden');
-    
-    // Cleanup khi unmount
-    return () => {
-      body.classList.remove('overflow-hidden');
+    const checkScreenSize = () => {
+      const isMobile = window.innerWidth < 1024;
+      if (isMobile) {
+        setIsSidebarOpen(true);
+        setShowChatView(false);
+        document.body.classList.add("overflow-hidden");
+      } else {
+        setIsSidebarOpen(false);
+        setShowChatView(false);
+        document.body.classList.remove("overflow-hidden");
+      }
     };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   // Auto scroll xuống cuối tin nhắn
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [selectedChat]);
 
-  const filteredChats = chatList.filter(chat =>
-    chat.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    chat.role.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredChats = chatList.filter((chat) =>
+    chat.name.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   const handleSendMessage = () => {
     if (messageInput.trim()) {
-      console.log('Sending message:', messageInput);
-      setMessageInput('');
+      console.log("Sending message:", messageInput);
+      setMessageInput("");
+      // TODO: Thêm message mới vào danh sách messages ở đây
+    }
+  };
+
+  const handleChatClick = (chat: Chat) => {
+    setSelectedChat(chat);
+    const isMobile = window.innerWidth < 1024;
+    if (isMobile) {
+      setIsSidebarOpen(false);
+      setShowChatView(true);
+    }
+  };
+
+  const handleBackToList = () => {
+    const isMobile = window.innerWidth < 1024;
+    if (isMobile) {
+      setShowChatView(false);
+      setIsSidebarOpen(true);
     }
   };
 
   return (
-    <div className="flex gap-4 h-full p-4 w-full">
+    <div className="-mt-3 flex min-h-0 w-full flex-1 flex-col bg-gray-50 lg:mx-0 lg:mt-0 lg:flex-row">
+      {" "}
+      {/* flex-1 để fill parent, -mx/-mt cancel padding của AdminLayout trên mobile, min-h-0 cho flex shrink */}
+      {/* Mobile Overlay - Chỉ overlay khi sidebar open và chưa vào chat view */}
+      {isSidebarOpen && !showChatView && (
+        <div
+          className="bg-opacity-50 fixed inset-0 z-40 bg-black transition-opacity duration-300 lg:hidden"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
       {/* Sidebar - Danh sách chat */}
-      <div className="w-80 border border-gray-200 rounded-lg flex flex-col h-full">
-        {/* Header */}
-        <div className="p-4 border-b border-gray-200 flex-shrink-0">
-          <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold text-gray-900">Chats</h2>
-            <button className="p-1 hover:bg-gray-100 rounded">
-              <div className="w-5 h-5 text-gray-500">
-                <HorizontaLDots />
-              </div>
-            </button>
-          </div>
-        </div>
-
+      <aside
+        className={`fixed inset-y-0 left-0 z-50 flex h-full min-h-0 w-full transform flex-col rounded-r-lg border-r border-gray-200 bg-white shadow-lg transition-all duration-300 ease-out will-change-transform lg:static lg:left-auto lg:z-auto lg:w-80 lg:rounded-none lg:shadow-none ${isSidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"} ${showChatView ? "hidden lg:block" : "block lg:block"} `}
+      >
         {/* Search */}
-        <div className="p-4 flex-shrink-0">
+        <div className="sticky top-3 z-10 flex-shrink-0 border-b border-gray-100 bg-white p-3 lg:p-4">
           <div className="relative">
-            <div className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400">
+            <div className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 transform text-gray-400">
               <SearchIcon />
             </div>
             <input
               type="text"
-              placeholder="Search..."
+              placeholder="Search chats..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full rounded-md border border-gray-200 py-2 pr-3 pl-10 text-sm focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
         </div>
 
         {/* Chat List */}
-        <div className="flex-1 overflow-y-auto">
-          {filteredChats.map((chat) => (
-            <div
-              key={chat.id}
-              onClick={() => setSelectedChat(chat)}
-              className={`p-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50 ${
-                selectedChat.id === chat.id ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''
-              }`}
-            >
-              <div className="flex items-center space-x-3">
-                <div className="relative">
-                  <Image
-                    src={chat.avatar}
-                    alt={chat.name}
-                    width={40}
-                    height={40}
-                    className="rounded-full"
-                  />
-                  {chat.isOnline && (
-                    <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+        <div className="scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent min-h-0 flex-1 overflow-y-auto">
+          {filteredChats.length > 0 ? (
+            filteredChats.map((chat) => (
+              <div
+                key={chat.id}
+                onClick={() => handleChatClick(chat)}
+                className={`cursor-pointer border-b border-gray-100 p-3 transition-colors duration-150 last:border-b-0 hover:bg-gray-50 active:bg-gray-100 ${
+                  selectedChat.id === chat.id
+                    ? "border-r-4 border-r-blue-500 bg-blue-50 lg:border-r-0 lg:border-l-4 lg:border-l-blue-500"
+                    : ""
+                }`}
+              >
+                <div className="flex items-start space-x-3">
+                  <div className="relative h-10 w-10 flex-shrink-0">
+                    <Image
+                      src={chat.avatar}
+                      alt={chat.name}
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                    />
+                    {chat.isOnline && (
+                      <div className="absolute -right-0.5 -bottom-0.5 h-3 w-3 rounded-full border-2 border-white bg-green-500"></div>
+                    )}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="mb-1 flex items-center justify-between">
+                      <h3 className="truncate text-sm font-medium text-gray-900">
+                        {chat.name}
+                      </h3>
+                      <span className="ml-2 flex-shrink-0 text-xs text-gray-500">
+                        {chat.time}
+                      </span>
+                    </div>
+                    <p className="truncate text-xs leading-tight text-gray-500">
+                      {chat.lastMessage}
+                    </p>
+                  </div>
+                  {chat.unreadCount > 0 && (
+                    <div className="ml-2 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-blue-500 text-xs text-white">
+                      {chat.unreadCount > 9 ? "9+" : chat.unreadCount}
+                    </div>
                   )}
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-sm font-medium text-gray-900 truncate">
-                      {chat.name}
-                    </h3>
-                    <span className="text-xs text-gray-500">{chat.time}</span>
-                  </div>
-                  <p className="text-sm text-gray-500 truncate">{chat.role}</p>
-                  <p className="text-xs text-gray-400 truncate mt-1">
-                    {chat.lastMessage}
-                  </p>
-                </div>
-                {chat.unreadCount > 0 && (
-                  <div className="bg-blue-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                    {chat.unreadCount}
-                  </div>
-                )}
               </div>
+            ))
+          ) : (
+            <div className="p-4 text-center text-sm text-gray-500">
+              No chats found
             </div>
-          ))}
+          )}
         </div>
-      </div>
-
-       {/* Main Chat Area */}
-       <div className="flex-1 border border-gray-200 rounded-lg flex flex-col h-full">
+      </aside>
+      {/* Main Chat Area */}
+      <main
+        className={`relative flex h-full min-h-0 w-full flex-1 flex-col overflow-hidden transition-opacity duration-300 ${showChatView ? "block opacity-100" : "hidden lg:block lg:opacity-100"}`}
+      >
         {/* Chat Header */}
-        <div className="p-4 border-b border-gray-200 bg-white flex-shrink-0">
+        <header className="sticky top-3 z-10 w-full flex-shrink-0 border-b border-gray-200 bg-white p-3 lg:p-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="relative">
+            <div className="flex flex-1 items-center space-x-3">
+              {/* Mobile Back Button */}
+              <button
+                className="-ml-1 rounded-md p-2 transition-colors duration-150 hover:bg-gray-100 active:bg-gray-200 lg:hidden"
+                onClick={handleBackToList}
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  className="h-5 w-5 text-gray-500"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <div className="relative flex-shrink-0">
                 <Image
                   src={selectedChat.avatar}
                   alt={selectedChat.name}
@@ -290,113 +355,101 @@ export default function CustomerSupport() {
                   className="rounded-full"
                 />
                 {selectedChat.isOnline && (
-                  <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+                  <div className="absolute -right-0.5 -bottom-0.5 h-3 w-3 rounded-full border-2 border-white bg-green-500"></div>
                 )}
               </div>
-              <div>
-                <h3 className="text-lg font-medium text-gray-900">
+              <div className="min-w-0 flex-1">
+                <h3 className="truncate text-base font-semibold text-gray-900">
                   {selectedChat.name}
                 </h3>
-                <p className="text-sm text-gray-500">{selectedChat.role}</p>
+                <p className="truncate text-xs text-gray-500">
+                  {selectedChat.role}
+                </p>
               </div>
             </div>
-            <div className="flex items-center space-x-2">
-              <button className="p-2 hover:bg-gray-100 rounded-lg">
-                <div className="w-5 h-5 text-gray-500">
-                  <PhoneIcon />
-                </div>
-              </button>
-              <button className="p-2 hover:bg-gray-100 rounded-lg">
-                <div className="w-5 h-5 text-gray-500">
-                  <VideoCallIcon />
-                </div>
-              </button>
-              <button className="p-2 hover:bg-gray-100 rounded-lg">
-                <div className="w-5 h-5 text-gray-500">
-                  <HorizontaLDots />
-                </div>
-              </button>
-            </div>
           </div>
-        </div>
+        </header>
 
-         {/* Messages Area */}
-         <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+        {/* Messages Area */}
+        <div className="h-full min-h-0 flex-1 overflow-y-auto scroll-smooth bg-gray-50 px-3 py-4 pb-24">
           {messages.map((message) => (
             <div
               key={message.id}
-              className={`flex ${message.isOwn ? 'justify-end' : 'justify-start'}`}
+              className={`flex ${message.isOwn ? "justify-end" : "justify-start"} mb-4`}
             >
-              <div className={`flex items-start space-x-2 max-w-xs lg:max-w-md ${message.isOwn ? 'flex-row-reverse space-x-reverse' : ''}`}>
-                {!message.isOwn && message.avatar && (
-                  <Image
-                    src={message.avatar}
-                    alt={message.sender}
-                    width={40}  
-                    height={40}  
-                    className="rounded-full flex-shrink-0"  
-                  />
+              <div
+                className={`flex max-w-[75%] items-end space-x-2 lg:max-w-[60%] ${message.isOwn ? "flex-row-reverse space-x-reverse" : ""}`}
+              >
+                {!message.isOwn && (
+                  <div className="relative h-8 w-8 flex-shrink-0 lg:h-10 lg:w-10">
+                    <Image
+                      src={message.avatar || "/images/user/default.jpg"}
+                      alt={message.sender}
+                      width={32}
+                      height={32}
+                      className="rounded-full lg:h-10 lg:w-10"
+                    />
+                  </div>
                 )}
-                <div className="min-w-0 flex-1">  
+                <div className="min-w-0 flex-1">
                   <div
-                    className={`px-4 py-2 rounded-lg ${
+                    className={`max-w-full rounded-2xl px-3 py-2 ${
                       message.isOwn
-                        ? 'bg-blue-500 text-white'
-                        : 'bg-gray-100 text-gray-900'
+                        ? "bg-blue-500 text-white"
+                        : "bg-white text-gray-900 shadow-sm"
                     }`}
                   >
-                    <p className="text-sm break-words">{message.content}</p>  
+                    <p className="text-sm break-words whitespace-pre-wrap">
+                      {message.content}
+                    </p>
                   </div>
-                  <div className={`text-xs text-gray-500 mt-1 ${message.isOwn ? 'text-right' : 'text-left'}`}>
-                    {message.isOwn ? message.time : `${message.sender}, ${message.time}`}
+                  <div
+                    className={`mt-1 text-xs text-gray-400 ${message.isOwn ? "text-right" : "text-left"}`}
+                  >
+                    {message.isOwn ? message.time : `${message.time}`}
                   </div>
                 </div>
-               </div>
-             </div>
-           ))}
-           {/* Invisible div để auto scroll */}
-           <div ref={messagesEndRef} />
-         </div>
-
-         {/* Message Input */}
-         <div className="p-4 border-t border-gray-200 bg-white flex-shrink-0">
-          <div className="flex items-center space-x-2">
-            <button className="p-2 hover:bg-gray-100 rounded-lg">
-              <div className="w-5 h-5 text-gray-500">
-                <EmojiIcon />
+                {message.isOwn && <div className="h-8 w-8 lg:h-10 lg:w-10" />}
               </div>
+            </div>
+          ))}
+          <div ref={messagesEndRef} />
+        </div>
+
+        {/* Message Input */}
+        <footer className="sticky right-0 bottom-0 left-0 flex-shrink-0 border-t border-gray-200 bg-white/95 p-3 backdrop-blur-sm lg:p-4">
+          <div className="flex max-w-full items-end space-x-2">
+            <button className="flex-shrink-0 rounded-full p-2 transition-colors duration-150 hover:bg-gray-100 active:bg-gray-200">
+              <EmojiIcon className="h-5 w-5 text-gray-500" />
             </button>
-            <div className="flex-1 relative">
+            <div className="relative min-w-0 flex-1">
               <input
                 type="text"
-                placeholder="Type a message"
+                placeholder="Type a message..."
                 value={messageInput}
                 onChange={(e) => setMessageInput(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                onKeyPress={(e) =>
+                  e.key === "Enter" && !e.shiftKey && handleSendMessage()
+                }
+                className="w-full resize-none rounded-full border border-gray-200 px-4 py-3 text-sm transition-shadow duration-150 focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none"
               />
             </div>
-            <button className="p-2 hover:bg-gray-100 rounded-lg">
-              <div className="w-5 h-5 text-gray-500">
-                <PaperClipIcon />
-              </div>
+            <button className="flex-shrink-0 rounded-full p-2 transition-colors duration-150 hover:bg-gray-100 active:bg-gray-200 lg:hidden">
+              <PaperClipIcon className="h-5 w-5 text-gray-500" />
             </button>
-            <button className="p-2 hover:bg-gray-100 rounded-lg">
-              <div className="w-5 h-5 text-gray-500">
-                <MicrophoneIcon />
-              </div>
+            <button className="flex-shrink-0 rounded-full p-2 transition-colors duration-150 hover:bg-gray-100 active:bg-gray-200 lg:hidden">
+              <MicrophoneIcon className="h-5 w-5 text-gray-500" />
             </button>
             <button
               onClick={handleSendMessage}
-              className="p-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg"
+              disabled={!messageInput.trim()}
+              className="transform rounded-full bg-blue-500 p-2 text-white transition-all duration-150 hover:bg-blue-600 active:scale-95 active:bg-blue-700 disabled:cursor-not-allowed disabled:bg-gray-300"
             >
-              <div className="w-5 h-5">
-                <PaperPlaneIcon />
-              </div>
+              <PaperPlaneIcon className="h-5 w-5" />
             </button>
           </div>
-        </div>
-      </div>
+        </footer>
+      </main>
     </div>
   );
 }
