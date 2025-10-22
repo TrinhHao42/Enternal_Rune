@@ -22,8 +22,5 @@ qr:
   template: qronly
   download: true
 
-payment:
-  api_key: j4fLfGVWhgSK0AUG1nm2YqsZ57wQwWRfPEY4GGXa9vMDe+xThVgXVYYz/Nv1oLuhoaKF+COdx35bNJKhWL89C0kBo8s=
-
 server:
   port: 8080

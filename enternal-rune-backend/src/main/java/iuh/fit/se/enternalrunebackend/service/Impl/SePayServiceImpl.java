@@ -8,6 +8,7 @@ import iuh.fit.se.enternalrunebackend.entity.Transaction;
 import iuh.fit.se.enternalrunebackend.entity.enums.PaymentStatus;
 import iuh.fit.se.enternalrunebackend.repository.OrderRepository;
 import iuh.fit.se.enternalrunebackend.repository.TransactionRepository;
+import iuh.fit.se.enternalrunebackend.service.SePayService;
 import iuh.fit.se.enternalrunebackend.util.GenerateQRURL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +19,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 
 @Service
-public class SePayService {
+public class SePayServiceImpl implements SePayService {
     @Autowired
     private QRConfig qrConfig;
 
