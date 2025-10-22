@@ -92,6 +92,57 @@ const chatList: Chat[] = [
     avatar: "/images/user/user-05.jpg",
     isOnline: false,
     unreadCount: 3,
+    
+  },
+  {
+    id: 8,
+    name: "David Brown",
+    role: "Digital Marketer",
+    lastMessage: "The campaign results look promising",
+    time: "1 hour",
+    avatar: "/images/user/user-05.jpg",
+    isOnline: false,
+    unreadCount: 3,
+  },
+  {
+    id: 9,
+    name: "David Brown",
+    role: "Digital Marketer",
+    lastMessage: "The campaign results look promising",
+    time: "1 hour",
+    avatar: "/images/user/user-05.jpg",
+    isOnline: false,
+    unreadCount: 3,
+  },
+  {
+    id: 10,
+    name: "David Brown",
+    role: "Digital Marketer",
+    lastMessage: "The campaign results look promising",
+    time: "1 hour",
+    avatar: "/images/user/user-05.jpg",
+    isOnline: false,
+    unreadCount: 3,
+  },
+  {
+    id: 11,
+    name: "David Brown",
+    role: "Digital Marketer",
+    lastMessage: "The campaign results look promising",
+    time: "1 hour",
+    avatar: "/images/user/user-05.jpg",
+    isOnline: false,
+    unreadCount: 3,
+  },
+  {
+    id: 12,
+    name: "David Brown",
+    role: "Digital Marketer",
+    lastMessage: "The campaign results look promising",
+    time: "1 hour",
+    avatar: "/images/user/user-05.jpg",
+    isOnline: false,
+    unreadCount: 3,
   },
 ];
 
@@ -247,7 +298,7 @@ export default function CustomerSupport() {
       )}
       {/* Sidebar - Danh sách chat */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 flex h-full min-h-0 w-full transform flex-col rounded-r-lg border-r border-gray-200 bg-white shadow-lg transition-all duration-300 ease-out will-change-transform lg:static lg:left-auto lg:z-auto lg:w-80 lg:rounded-none lg:shadow-none ${isSidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"} ${showChatView ? "hidden lg:block" : "block lg:block"} `}
+        className={`fixed inset-y-0 overflow-y-auto left-0 z-50 flex h-full min-h-0 w-full transform flex-col rounded-r-lg border-r border-gray-200 bg-white shadow-lg transition-all duration-300 ease-out will-change-transform lg:static lg:left-auto lg:z-auto lg:w-80 lg:rounded-none lg:shadow-none ${isSidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"} ${showChatView ? "hidden lg:block" : "block lg:block"} `}
       >
         {/* Search */}
         <div className="sticky top-3 z-10 flex-shrink-0 border-b border-gray-100 bg-white p-3 lg:p-4">
@@ -320,12 +371,11 @@ export default function CustomerSupport() {
         </div>
       </aside>
       {/* Main Chat Area */}
-      <main
-        className={`relative flex h-full min-h-0 w-full flex-1 flex-col overflow-hidden transition-opacity duration-300 ${showChatView ? "block opacity-100" : "hidden lg:block lg:opacity-100"}`}
-      >
+      <main className="relative flex flex-col w-full h-full overflow-hidden">
+
         {/* Chat Header */}
-        <header className="sticky top-3 z-10 w-full flex-shrink-0 border-b border-gray-200 bg-white p-3 lg:p-4">
-          <div className="flex items-center justify-between">
+        <header className="sticky top-0 z-10 w-full flex-shrink-0 border-b border-gray-200 bg-white p-3 lg:p-4">
+        <div className="flex items-center justify-between">
             <div className="flex flex-1 items-center space-x-3">
               {/* Mobile Back Button */}
               <button
@@ -371,7 +421,7 @@ export default function CustomerSupport() {
         </header>
 
         {/* Messages Area */}
-        <div className="h-full min-h-0 flex-1 overflow-y-auto scroll-smooth bg-gray-50 px-3 py-4 pb-24">
+        <div className="flex-1 overflow-y-auto bg-gray-50 px-3 py-4 ">
           {messages.map((message) => (
             <div
               key={message.id}
