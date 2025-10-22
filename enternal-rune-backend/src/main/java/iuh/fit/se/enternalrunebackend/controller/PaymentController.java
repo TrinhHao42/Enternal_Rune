@@ -5,7 +5,7 @@ import iuh.fit.se.enternalrunebackend.dto.request.TransactionRequest;
 import iuh.fit.se.enternalrunebackend.dto.response.QRCodeResponse;
 import iuh.fit.se.enternalrunebackend.entity.Order;
 import iuh.fit.se.enternalrunebackend.entity.enums.PaymentStatus;
-import iuh.fit.se.enternalrunebackend.service.Impl.SePayService;
+import iuh.fit.se.enternalrunebackend.service.Impl.SePayServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -23,7 +23,7 @@ import java.io.IOException;
 @RequestMapping("/payment")
 public class PaymentController {
     @Autowired
-    private SePayService sePayService;
+    private SePayServiceImpl sePayService;
 
     @PostMapping("/order")
     public Order order(@RequestBody Order order){
