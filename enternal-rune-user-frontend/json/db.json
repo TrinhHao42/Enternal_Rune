@@ -14471,6 +14471,181 @@
         }
       },
       "ciQuantity": 2
+    },
+    {
+      "ciId": 2,
+      "ciProductVariant": {
+        "prodvId": 1,
+        "prodvProduct": 1,
+        "prodvName": "Samsung Galaxy A34 5G 8GB 128GB",
+        "prodvModel": "samsung-galaxy-a",
+        "prodvVersion": "A36",
+        "prodvColor": "Bạc",
+        "prodvImage": {
+          "imageId": "1",
+          "imageName": "Samsung Galaxy A34 5G 8GB 128GB-bạc.jpg",
+          "imageData": "https://cdn2.cellphones.com.vn/insecure/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-a34_1__1.jpg"
+        },
+        "prodvPrice": {
+          "ppId": 82,
+          "ppPrice": 5890000,
+          "ppPriceStatus": "ACTIVE",
+          "ppStartDate": "2025-09-22",
+          "ppEndDate": null,
+          "ppProduct": 82
+        }
+      },
+      "ciQuantity": 2
+    },
+    {
+      "ciId": 3,
+      "ciProductVariant": {
+        "prodvId": 1,
+        "prodvProduct": 1,
+        "prodvName": "Samsung Galaxy A34 5G 8GB 128GB",
+        "prodvModel": "samsung-galaxy-a",
+        "prodvVersion": "A36",
+        "prodvColor": "Bạc",
+        "prodvImage": {
+          "imageId": "1",
+          "imageName": "Samsung Galaxy A34 5G 8GB 128GB-bạc.jpg",
+          "imageData": "https://cdn2.cellphones.com.vn/insecure/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-a34_1__1.jpg"
+        },
+        "prodvPrice": {
+          "ppId": 82,
+          "ppPrice": 5890000,
+          "ppPriceStatus": "ACTIVE",
+          "ppStartDate": "2025-09-22",
+          "ppEndDate": null,
+          "ppProduct": 82
+        }
+      },
+      "ciQuantity": 2
+    },
+    {
+      "ciId": 4,
+      "ciProductVariant": {
+        "prodvId": 1,
+        "prodvProduct": 1,
+        "prodvName": "Samsung Galaxy A34 5G 8GB 128GB",
+        "prodvModel": "samsung-galaxy-a",
+        "prodvVersion": "A36",
+        "prodvColor": "Bạc",
+        "prodvImage": {
+          "imageId": "1",
+          "imageName": "Samsung Galaxy A34 5G 8GB 128GB-bạc.jpg",
+          "imageData": "https://cdn2.cellphones.com.vn/insecure/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-a34_1__1.jpg"
+        },
+        "prodvPrice": {
+          "ppId": 82,
+          "ppPrice": 5890000,
+          "ppPriceStatus": "ACTIVE",
+          "ppStartDate": "2025-09-22",
+          "ppEndDate": null,
+          "ppProduct": 82
+        }
+      },
+      "ciQuantity": 2
+    },
+    {
+      "ciId": 5,
+      "ciProductVariant": {
+        "prodvId": 1,
+        "prodvProduct": 1,
+        "prodvName": "Samsung Galaxy A34 5G 8GB 128GB",
+        "prodvModel": "samsung-galaxy-a",
+        "prodvVersion": "A36",
+        "prodvColor": "Bạc",
+        "prodvImage": {
+          "imageId": "1",
+          "imageName": "Samsung Galaxy A34 5G 8GB 128GB-bạc.jpg",
+          "imageData": "https://cdn2.cellphones.com.vn/insecure/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-a34_1__1.jpg"
+        },
+        "prodvPrice": {
+          "ppId": 82,
+          "ppPrice": 5890000,
+          "ppPriceStatus": "ACTIVE",
+          "ppStartDate": "2025-09-22",
+          "ppEndDate": null,
+          "ppProduct": 82
+        }
+      },
+      "ciQuantity": 2
+    },
+    {
+      "ciId": 6,
+      "ciProductVariant": {
+        "prodvId": 1,
+        "prodvProduct": 1,
+        "prodvName": "Samsung Galaxy A34 5G 8GB 128GB",
+        "prodvModel": "samsung-galaxy-a",
+        "prodvVersion": "A36",
+        "prodvColor": "Bạc",
+        "prodvImage": {
+          "imageId": "1",
+          "imageName": "Samsung Galaxy A34 5G 8GB 128GB-bạc.jpg",
+          "imageData": "https://cdn2.cellphones.com.vn/insecure/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-a34_1__1.jpg"
+        },
+        "prodvPrice": {
+          "ppId": 82,
+          "ppPrice": 5890000,
+          "ppPriceStatus": "ACTIVE",
+          "ppStartDate": "2025-09-22",
+          "ppEndDate": null,
+          "ppProduct": 82
+        }
+      },
+      "ciQuantity": 2
+    },
+    {
+      "ciId": 7,
+      "ciProductVariant": {
+        "prodvId": 1,
+        "prodvProduct": 1,
+        "prodvName": "Samsung Galaxy A34 5G 8GB 128GB",
+        "prodvModel": "samsung-galaxy-a",
+        "prodvVersion": "A36",
+        "prodvColor": "Bạc",
+        "prodvImage": {
+          "imageId": "1",
+          "imageName": "Samsung Galaxy A34 5G 8GB 128GB-bạc.jpg",
+          "imageData": "https://cdn2.cellphones.com.vn/insecure/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-a34_1__1.jpg"
+        },
+        "prodvPrice": {
+          "ppId": 82,
+          "ppPrice": 5890000,
+          "ppPriceStatus": "ACTIVE",
+          "ppStartDate": "2025-09-22",
+          "ppEndDate": null,
+          "ppProduct": 82
+        }
+      },
+      "ciQuantity": 2
+    },
+    {
+      "ciId": 8,
+      "ciProductVariant": {
+        "prodvId": 1,
+        "prodvProduct": 1,
+        "prodvName": "Samsung Galaxy A34 5G 8GB 128GB",
+        "prodvModel": "samsung-galaxy-a",
+        "prodvVersion": "A36",
+        "prodvColor": "Bạc",
+        "prodvImage": {
+          "imageId": "1",
+          "imageName": "Samsung Galaxy A34 5G 8GB 128GB-bạc.jpg",
+          "imageData": "https://cdn2.cellphones.com.vn/insecure/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-a34_1__1.jpg"
+        },
+        "prodvPrice": {
+          "ppId": 82,
+          "ppPrice": 5890000,
+          "ppPriceStatus": "ACTIVE",
+          "ppStartDate": "2025-09-22",
+          "ppEndDate": null,
+          "ppProduct": 82
+        }
+      },
+      "ciQuantity": 2
     }
   ]
 }

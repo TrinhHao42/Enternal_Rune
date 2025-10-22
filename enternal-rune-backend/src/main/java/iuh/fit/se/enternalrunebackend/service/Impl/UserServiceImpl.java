@@ -1,8 +1,9 @@
-package iuh.fit.se.enternalrunebackend.service;
+package iuh.fit.se.enternalrunebackend.service.Impl;
 import iuh.fit.se.enternalrunebackend.entity.Role;
 import iuh.fit.se.enternalrunebackend.entity.User;
 import iuh.fit.se.enternalrunebackend.repository.RoleRepository;
 import iuh.fit.se.enternalrunebackend.repository.UserRepository;
+import iuh.fit.se.enternalrunebackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -14,7 +15,7 @@ import java.util.Collection;
 import java.util.stream.Collectors;
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
     private RoleRepository roleRepository;
 
