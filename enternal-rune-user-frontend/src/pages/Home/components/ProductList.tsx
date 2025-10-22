@@ -2,6 +2,35 @@
 import ProductCard from "./ProductCard"
 import { FaArrowRight } from "react-icons/fa6";
 import { useProducts } from "@/context/ProductsContext";
+import { Product } from "@/types/Product";
+
+
+export const renderBestSellers = (products: Product[], hideButton = false) => {
+    return (
+        <div className="py-6">
+            <div className="flex justify-between items-center pb-6">
+                <h2 className="text-2xl font-semibold">{hideButton ? 'Sản phẩm có liên quan' : 'Sản phẩm mới'}</h2>
+                {!hideButton && (
+                    <p className="flex gap-2 items-center justify-between group cursor-pointer">
+                        Xem tất cả <FaArrowRight className="group-hover:translate-x-1 transition-all" />
+                    </p>
+                )}
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
+                {products.slice(8, 12).map((product) => (
+                    <ProductCard key={product.prodId} product={product} />
+                ))}
+            </div>
+
+            {hideButton && (
+                <button className="mt-8 mx-auto bg-white text-black flex h-[42px] px-5 py-[10px] justify-center items-center gap-[10px] rounded-lg border border-[#565656] transition-all hover:bg-gray-100 hover:shadow-md hover:border-gray-400">
+                    Xem thêm
+                </button>
+            )}
+        </div>
+    );
+};
+
 
 export default function ProductList() {
     const { products, loading, error } = useProducts();
@@ -29,17 +58,7 @@ export default function ProductList() {
             <button className="mt-8 mx-auto bg-white text-black flex h-[42px] px-5 py-[10px] justify-center items-center gap-[10px] rounded-lg border border-[#565656] transition-all hover:bg-gray-100 hover:shadow-md hover:border-gray-400">
                 Xem thêm
             </button>
-            <div className="py-6">
-                <div className="flex justify-between items-center pb-6">
-                    <h2 className="text-2xl font-semibold">Sản phẩm mới</h2>
-                    <p className="flex gap-2 items-center justify-between group cursor-pointer">Xem tất cả <FaArrowRight className="group-hover:translate-x-1 transition-all" /></p>
-                </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
-                    {products.slice(8, 12).map((product) => (
-                        <ProductCard key={product.prodId} product={product} />
-                    ))}
-                </div>
-            </div>
+            {renderBestSellers(products, false)}
         </>
     )
 }
