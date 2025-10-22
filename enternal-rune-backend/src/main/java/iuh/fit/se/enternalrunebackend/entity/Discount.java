@@ -19,7 +19,6 @@ import java.util.List;
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Discount {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "discount_id")
@@ -62,5 +61,4 @@ public class Discount {
 
     @OneToMany(mappedBy = "discount", cascade = CascadeType.ALL, orphanRemoval = true)
     List<ProductPrice> productPrices = new ArrayList<>();
-
 }

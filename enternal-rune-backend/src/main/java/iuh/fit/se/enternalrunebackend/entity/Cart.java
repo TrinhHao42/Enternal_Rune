@@ -26,6 +26,4 @@ public class Cart {
 
     @OneToMany(mappedBy = "ciCart", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<CartItem> items = new ArrayList<>();
-    
-
 }
