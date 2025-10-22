@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev:tunnel": "next dev -H 0.0.0.0 -p 3000 & lt --port 3000 --subdomain enternal-rune-admin"
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.15",
@@ -22,6 +23,7 @@
     "apexcharts": "^4.3.0",
     "autoprefixer": "^10.4.20",
     "flatpickr": "^4.6.13",
+    "localtunnel": "^2.0.2",
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-apexcharts": "^1.7.0",
