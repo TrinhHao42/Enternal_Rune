@@ -1,12 +1,13 @@
 package iuh.fit.se.enternalrunebackend.exception;
 
 import iuh.fit.se.enternalrunebackend.exception.payment_exception.PaymentException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-public class GlobalException extends RuntimeException {
-    private PaymentException paymentException;
-
-    public GlobalException(PaymentException paymentException) {
-        super(paymentException.getMessage());
-        this.paymentException = paymentException;
+@RestControllerAdvice
+public class GlobalException {
+    @ExceptionHandler
+    public String handleException(PaymentException paymentException) {
+        return paymentException.getMessage();
     }
 }
