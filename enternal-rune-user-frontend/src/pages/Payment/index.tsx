@@ -3,22 +3,23 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useCheckout } from '@/context/CheckoutContext'
 import PersonalDetails from './components/PersonalDetails'
-import PaymentMethod from './components/PaymentMethod'
+import QRPayment from './components/QRPayment'
 import Complete from './components/Complete'
 import OrderSummary from './components/OrderSummary'
+import ProgressStepper from './components/ProgressStepper'
 
 const Payment = () => {
     const router = useRouter();
     const { checkoutItems } = useCheckout();
     const [currentStep, setCurrentStep] = useState(1);
     const [isLoading, setIsLoading] = useState(true);
+    const [showQRPayment, setShowQRPayment] = useState(false);
 
     // Form data states
     const [personalData, setPersonalData] = useState({
         fullName: '',
         email: '',
-        phone: '',
-        address: '',
+        street: '',
         city: '',
         district: '',
         ward: ''
@@ -51,7 +52,7 @@ const Payment = () => {
     }));
 
     const steps = [
-        { number: 1, name: 'Thông tin cá nhân', key: 'personal' },
+        { number: 1, name: 'Đặt hàng', key: 'checkout' },
         { number: 2, name: 'Thanh toán', key: 'payment' },
         { number: 3, name: 'Hoàn tất', key: 'complete' }
     ];
@@ -65,39 +66,55 @@ const Payment = () => {
     };
 
     const handleNextStep = () => {
-        if (currentStep < 3) {
+        if (currentStep === 1) {
+            // After personal details, show QR payment directly
+            setShowQRPayment(true);
+            setCurrentStep(2);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else if (currentStep < 3) {
             setCurrentStep(currentStep + 1);
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
 
     const handlePreviousStep = () => {
-        if (currentStep > 1) {
+        if (showQRPayment) {
+            setShowQRPayment(false);
+            setCurrentStep(1);
+        } else if (currentStep > 1) {
             setCurrentStep(currentStep - 1);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const handlePayment = () => {
-        // Process payment logic here
-        handleNextStep();
+        // This is now only called from step 1
+        setShowQRPayment(true);
+        setCurrentStep(2);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const handlePaymentSuccess = () => {
+        // Payment successful, move to complete step
+        setShowQRPayment(false);
+        setCurrentStep(3);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const calculateTotal = () => {
+        const subtotal = orderItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const tax = subtotal * 0.08;
+        return subtotal + tax;
     };
 
     const isStepValid = () => {
         if (currentStep === 1) {
-            return personalData.fullName && personalData.email && personalData.phone && 
-                   personalData.address && personalData.city && personalData.district && personalData.ward;
-        }
-        if (currentStep === 2) {
-            if (paymentMethod === 'credit-card') {
-                return cardData.cardNumber && cardData.cardName && cardData.expiryDate && cardData.cvv;
-            }
-            return true; // Other payment methods don't need validation
+            return personalData.fullName && personalData.email && personalData.street &&
+                personalData.city && personalData.district && personalData.ward;
         }
         return true;
     };
 
-    // Show loading while checking
     if (isLoading) {
         return (
             <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -112,65 +129,22 @@ const Payment = () => {
     return (
         <div className="min-h-screen bg-gray-50 py-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Progress Steps */}
-                <div className="mb-8">
-                    <div className="flex items-center justify-center">
-                        {steps.map((step, index) => (
-                            <React.Fragment key={step.number}>
-                                {/* Step Circle */}
-                                <div className="flex flex-col items-center">
-                                    <div
-                                        className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center font-bold text-sm sm:text-base transition-all duration-300 ${
-                                            currentStep > step.number
-                                                ? 'bg-green-500 text-white'
-                                                : currentStep === step.number
-                                                ? 'bg-blue-600 text-white ring-4 ring-blue-200'
-                                                : 'bg-gray-300 text-gray-600'
-                                        }`}
-                                    >
-                                        {currentStep > step.number ? (
-                                            <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                            </svg>
-                                        ) : (
-                                            step.number
-                                        )}
-                                    </div>
-                                    <span className={`mt-2 text-xs sm:text-sm font-medium ${
-                                        currentStep >= step.number ? 'text-gray-900' : 'text-gray-500'
-                                    }`}>
-                                        {step.name}
-                                    </span>
-                                </div>
+                <ProgressStepper currentStep={currentStep} steps={steps} />
 
-                                {/* Connector Line */}
-                                {index < steps.length - 1 && (
-                                    <div className={`w-16 sm:w-32 h-1 mx-2 transition-all duration-300 ${
-                                        currentStep > step.number ? 'bg-green-500' : 'bg-gray-300'
-                                    }`} />
-                                )}
-                            </React.Fragment>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Main Content */}
                 <div className="flex flex-col lg:flex-row gap-8">
-                    {/* Left Side - Forms */}
                     <div className="flex-1">
-                        {currentStep === 1 && (
+                        {currentStep === 1 && !showQRPayment && (
                             <PersonalDetails
                                 formData={personalData}
                                 onInputChange={handlePersonalDataChange}
                             />
                         )}
 
-                        {currentStep === 2 && (
-                            <PaymentMethod
-                                selectedMethod={paymentMethod}
-                                onMethodChange={setPaymentMethod}
-                                cardData={cardData}
-                                onCardDataChange={handleCardDataChange}
+                        {currentStep === 2 && showQRPayment && (
+                            <QRPayment
+                                totalAmount={calculateTotal()}
+                                orderDescription={`Đơn hàng ${orderItems.length} sản phẩm`}
+                                onPaymentSuccess={handlePaymentSuccess}
                             />
                         )}
 
@@ -181,32 +155,26 @@ const Payment = () => {
                             />
                         )}
 
-                        {/* Navigation Buttons */}
-                        {currentStep < 3 && (
-                            <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                                {currentStep > 1 && (
-                                    <button
-                                        onClick={handlePreviousStep}
-                                        className="flex-1 sm:flex-none px-6 py-3 border-2 border-gray-800 text-gray-800 rounded-lg font-semibold hover:bg-gray-800 hover:text-white active:scale-95 transition-all duration-150"
-                                    >
-                                        ← Quay lại
-                                    </button>
-                                )}
+
+                        <div className="mt-6 flex flex-col sm:flex-row gap-4">
+                            {currentStep < 3 && !showQRPayment && (
                                 <button
-                                    onClick={currentStep === 2 ? handlePayment : handleNextStep}
+                                    onClick={currentStep === 1 ? handlePayment : handleNextStep}
                                     disabled={!isStepValid()}
                                     className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 active:scale-95 transition-all duration-150 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:hover:bg-gray-400"
                                 >
-                                    {currentStep === 2 ? `Thanh toán | ${(orderItems.reduce((sum, item) => sum + (item.price * item.quantity), 0) * 1.08).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}` : 'Tiếp tục →'}
+                                    {currentStep === 1 && "Đặt hàng"}
                                 </button>
-                            </div>
-                        )}
+                            )}
+                        </div>
                     </div>
 
                     {/* Right Side - Order Summary */}
-                    <div className="lg:w-96">
-                        <OrderSummary items={orderItems} />
-                    </div>
+                    {!showQRPayment && currentStep < 3 && (
+                        <div className="lg:w-96">
+                            <OrderSummary items={orderItems} />
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
