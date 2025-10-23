@@ -11,7 +11,7 @@ import ProgressStepper from './components/ProgressStepper'
 const Payment = () => {
     const router = useRouter();
     const { checkoutItems } = useCheckout();
-    const [currentStep, setCurrentStep] = useState(3);
+    const [currentStep, setCurrentStep] = useState(1);
     const [isLoading, setIsLoading] = useState(true);
     const [showQRPayment, setShowQRPayment] = useState(false);
 
@@ -52,7 +52,7 @@ const Payment = () => {
     }));
 
     const steps = [
-        { number: 1, name: 'Thông tin cá nhân', key: 'personal' },
+        { number: 1, name: 'Đặt hàng', key: 'checkout' },
         { number: 2, name: 'Thanh toán', key: 'payment' },
         { number: 3, name: 'Hoàn tất', key: 'complete' }
     ];

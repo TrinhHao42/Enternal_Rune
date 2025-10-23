@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import { PaymentStatus } from "@/types/enums/PaymentStatus";
+import AxiosInstance from "@/configs/AxiosInstance";
 
 interface QRPaymentProps {
     totalAmount: number;
@@ -17,16 +18,12 @@ const QRPayment = ({ totalAmount, orderDescription, onPaymentSuccess }: QRPaymen
     useEffect(() => {
         const getQrCode = async (amount: number, description: string) => {
             try {
-                const res = await fetch("http://localhost:8080/payment/getQRcode", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ amount, description }),
-                })
+                const res = await AxiosInstance.post("/payment/getQRcode", {
+                    amount,
+                    description
+                }, { responseType: "blob" })
 
-                if (!res.ok) throw new Error("Failed to fetch QR code")
-
-                const blob = await res.blob()
-                setQrCode(URL.createObjectURL(blob))
+                setQrCode(URL.createObjectURL(res.data))
             } catch (error) {
                 console.error("Error fetching QR code:", error)
             }
@@ -36,7 +33,11 @@ const QRPayment = ({ totalAmount, orderDescription, onPaymentSuccess }: QRPaymen
 
         const intervalId = setInterval(async () => {
             try {
-
+                const statusRes = await AxiosInstance.get("/payment/checkPaymentStatus", {
+                    params: { description: orderDescription }
+                })
+                
+                setPaymentStatus(statusRes.data.status)
             } catch (error) {
                 console.error("Error checking payment status:", error)
             }
