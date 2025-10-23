@@ -9,12 +9,12 @@ export default function ProductCard({ product }: { product: Product }) {
     const originalPrice = product.prodOriginalPrice || (product.prodPrice ? product.prodPrice * 1.15 : 0);
 
     return (
-        <Link href={`/products/${product.prodId}`} className="block">
+        <Link href={`/products/${product.id}`} className="block">
             <div className="group cursor-pointer w-full bg-white overflow-hidden rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-500">
             {/* Image Container */}
             <div className="relative p-4 bg-gradient-to-br from-blue-50 to-white group-hover:from-blue-100 group-hover:to-blue-50 transition-colors duration-300">
                 <Image
-                    src={product.prodImgUrl[0].imageData || "/images/iphone.png"}
+                    src={product.prodImg[0].imgData || "/images/iphone.png"}
                     alt={product.prodName}
                     className="mx-auto w-32 h-32 object-contain rounded-2xl group-hover:scale-110 transition-transform duration-500"
                     width={128}

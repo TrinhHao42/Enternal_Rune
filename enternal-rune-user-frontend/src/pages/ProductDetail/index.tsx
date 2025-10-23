@@ -16,12 +16,12 @@ export default function ProductDetail() {
 
   useEffect(() => {
     if (params?.id && products.length > 0) {
-      const foundProduct = products.find(p => p.prodId === parseInt(params.id as string))
+      // Convert ID to string for comparison since our Product type uses string ID
+      const productId = params.id as string
+      const foundProduct = products.find(p => String(p.id) === productId)
       setProduct(foundProduct)
     }
   }, [params?.id, products])
-
-  console.log(product);
 
 
   if (loading) {
@@ -52,21 +52,43 @@ export default function ProductDetail() {
     )
   }
 
-  const images = product.prodImgUrl?.map(img => img.imageData) || ['/images/iphone.png']
-  const specifications = {
-    'Service Provider': 'Unlocked',
-    'CPU Model': 'Snapdragon 8 Gen 3',
-    'Front Camera': '12 MP',
-    'RAM Memory': '12 GB',
-    'Screen Size': '6.8 inches',
-    'Weight': '218 g',
-    'Storage': '512 GB',
-    'Operating System': 'Android 14',
-    'Battery': '5000 mAh',
-    'Network': '5G',
-    'Display Type': 'Dynamic AMOLED 2X',
-    'Water Resistance': 'IP68'
+  const images = product.prodImg?.map(img => img.imgData) || ['/images/iphone.png']
+  
+  // Chuyển đổi prodSpecs từ product sang định dạng phù hợp cho SpecificationsSection
+  const getSpecificationsForDisplay = (prodSpecs?: { [key: string]: string | number | boolean }) => {
+    if (!prodSpecs) return {}
+    
+    // Chuyển đổi các key thành tên hiển thị tiếng Việt và đảm bảo values là string
+    const displayMap: { [key: string]: string } = {
+      screenSize: 'Kích thước màn hình',
+      displayTech: 'Công nghệ màn hình', 
+      resolution: 'Độ phân giải',
+      displayFeatures: 'Tính năng màn hình',
+      rearCamera: 'Camera sau',
+      frontCamera: 'Camera trước',
+      chipset: 'Chipset',
+      cpuType: 'Loại CPU',
+      ram: 'RAM',
+      storage: 'Bộ nhớ trong',
+      battery: 'Pin',
+      os: 'Hệ điều hành',
+      th_sim: 'SIM',
+      nfcTech: 'Công nghệ NFC',
+      cm_bin: 'Cảm Biến'
+    }
+    
+    const specifications: Record<string, string> = {}
+    
+    Object.entries(prodSpecs).forEach(([key, value]) => {
+      const displayKey = displayMap[key] || key
+      const displayValue = String(value)
+      specifications[displayKey] = displayValue
+    })
+    
+    return specifications
   }
+
+  const specifications = getSpecificationsForDisplay(product.prodSpecs)
 
   return (
     <div className="container mx-auto px-20 py-6">
@@ -90,7 +112,19 @@ export default function ProductDetail() {
           product={product}
         />
       </div>
-      <SpecificationsSection specifications={specifications} />
+      {/* Hiển thị thông số kỹ thuật */}
+      {product.prodSpecs && Object.keys(product.prodSpecs).length > 0 ? (
+        <SpecificationsSection specifications={specifications} />
+      ) : (
+        <div className="w-full bg-gray-50 rounded-2xl p-8 text-center">
+          <div className="animate-pulse">
+            <div className="h-6 bg-gray-300 rounded w-1/3 mx-auto mb-4"></div>
+            <div className="h-4 bg-gray-200 rounded w-1/2 mx-auto"></div>
+          </div>
+          <p className="text-gray-500 mt-4">Đang tải thông tin sản phẩm...</p>
+        </div>
+      )}
+      
       {renderBestSellers(products, true)}
     </div>
   )

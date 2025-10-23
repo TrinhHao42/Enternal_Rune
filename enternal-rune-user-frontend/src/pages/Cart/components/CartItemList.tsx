@@ -21,8 +21,8 @@ const CartItemList = ({ item, isSelected, onToggle }: CartItemListProps) => {
             
             {/* Image */}
             <Image
-                alt={item.ciProductVariant.prodvImage.imageName}
-                src={item.ciProductVariant.prodvImage.imageData}
+                alt={item.ciProductVariant.prodvImage.imgName}
+                src={item.ciProductVariant.prodvImage.imgData}
                 width={100}
                 height={100}
                 className="rounded-md object-cover border border-gray-200 w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0"
