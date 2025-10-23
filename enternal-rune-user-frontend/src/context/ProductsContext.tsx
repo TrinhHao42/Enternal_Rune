@@ -2,7 +2,6 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react"
 import { Product } from "@/types/Product"
-import { ProductPrice } from "@/types/ProductPrice"
 
 type ProductsContextType = {
     products: Product[]
@@ -23,39 +22,22 @@ export const ProductsProvider = ({ children }: { children: ReactNode }) => {
         setError(null)
 
         try {
-            // Gọi song song cả 2 API
-            const [productsRes, pricesRes] = await Promise.all([
-                fetch("http://localhost:3001/products"),
-                fetch("http://localhost:3001/product_prices"),
-            ])
+            // Fetch products from db.json which already includes prices
+            const productsRes = await fetch("http://localhost:3001/products")
 
-            if (!productsRes.ok || !pricesRes.ok) {
-                throw new Error("Không thể tải dữ liệu sản phẩm hoặc giá.")
+            if (!productsRes.ok) {
+                throw new Error("Không thể tải dữ liệu sản phẩm.")
             }
 
-            const [productsData, pricesData]: [Product[], ProductPrice[]] = await Promise.all([
-                productsRes.json(),
-                pricesRes.json(),
-            ])
+            const productsData: Product[] = await productsRes.json()
 
-            // Tạo Map giá theo productId để tìm nhanh
-            const priceMap = new Map<number, ProductPrice>(
-                pricesData.map((p) => [p.ppProduct, p])
-            )
+            // Products already have prodPrice from db.json, just calculate original price
+            const processedProducts: Product[] = productsData.map((prod) => ({
+                ...prod,
+                prodOriginalPrice: prod.prodPrice ? prod.prodPrice * 1.15 : 0, // Giá gốc (tăng 15%)
+            }))
 
-            // Merge dữ liệu sản phẩm với giá
-            const mergedProducts: Product[] = productsData.map((prod) => {
-                const priceInfo = priceMap.get(prod.prodId)
-                const activePrice = priceInfo?.ppPriceStatus === "ACTIVE" ? priceInfo.ppPrice : 0
-
-                return {
-                    ...prod,
-                    prodPrice: activePrice,
-                    prodOriginalPrice: activePrice ? activePrice * 1.15 : 0, // Giá gốc (tăng 15%)
-                }
-            })
-
-            setProducts(mergedProducts)
+            setProducts(processedProducts)
         } catch (err) {
             const message = err instanceof Error ? err.message : "Lỗi không xác định khi tải dữ liệu"
             console.error("Error fetching products:", message)
