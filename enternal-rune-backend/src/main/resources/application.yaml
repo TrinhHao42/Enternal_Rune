@@ -2,6 +2,28 @@ spring:
   application:
     name: enternal-rune-backend
 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/PhoneDB
+    username: postgres
+    password: postgrespassword
+    driver-class-name: org.postgresql.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+qr:
+  acc: ${QR_ACC}
+  bank: ${QR_BANK}
+  template: ${QR_TEMPLATE}
+  download: ${QR_DOWNLOAD}
+
+sepay:
+  api: ${SEPAY_API}
+
+server:
+  port: 8080
