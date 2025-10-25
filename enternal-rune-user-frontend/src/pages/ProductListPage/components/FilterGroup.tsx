@@ -5,7 +5,7 @@
 
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 
 export interface FilterOption {
   value: string | number
@@ -29,7 +29,7 @@ export default function FilterGroup({
   onChange,
   collapsible = false
 }: FilterGroupProps) {
-  const [isOpen, setIsOpen] = React.useState(true)
+  const [isOpen, setIsOpen] = useState(true)
 
   return (
     <div className="border-b border-gray-200 pb-4 mb-4">

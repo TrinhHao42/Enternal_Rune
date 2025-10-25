@@ -5,7 +5,7 @@
 
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import FilterGroup, { FilterOption } from './FilterGroup'
 import { useProductList } from '@/context/ProductListContext'
 import { X } from 'lucide-react'
@@ -19,7 +19,7 @@ export default function FilterSidebar({ onClose, isMobile = false }: FilterSideb
   const { filters, setFilters } = useProductList()
 
   // Local state for pending changes
-  const [localFilters, setLocalFilters] = React.useState(filters)
+  const [localFilters, setLocalFilters] = useState(filters)
 
   // Brand options
   const brandOptions: FilterOption[] = [

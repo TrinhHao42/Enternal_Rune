@@ -3,10 +3,10 @@
 import React, { useState } from 'react'
 import { ProductListProvider, useProductList } from '@/context/ProductListContext'
 import { useProducts } from '@/context/ProductsContext'
-import FilterSidebar from '@/components/ProductList/FilterSidebar'
-import SortDropdown from '@/components/ProductList/SortDropdown'
-import ProductGrid from '@/components/ProductList/ProductGrid'
-import Pagination from '@/components/ProductList/Pagination'
+import FilterSidebar from '@/pages/ProductListPage/components/FilterSidebar'
+import SortDropdown from '@/pages/ProductListPage/components/SortDropdown'
+import ProductGrid from '@/pages/ProductListPage/components/ProductGrid'
+import Pagination from '@/pages/ProductListPage/components/Pagination'
 import { Filter } from 'lucide-react'
 
 const ProductListContent = () => {

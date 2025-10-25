@@ -1,5 +1,5 @@
 "use client"
-import ProductCard from "./ProductCard"
+import ProductCard from "../../../components/ProductCard"
 import { FaArrowRight } from "react-icons/fa6";
 import { useProducts } from "@/context/ProductsContext";
 import { Product } from "@/types/Product";
