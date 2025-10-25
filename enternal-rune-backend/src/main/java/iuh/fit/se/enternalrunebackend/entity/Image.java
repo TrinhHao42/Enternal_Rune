@@ -19,9 +19,9 @@ public class Image {
     @Column(name = "image_name")
     String imageName;
     @Column(name="image_data",columnDefinition = "TEXT")
-    @Lob
+//    @Lob
     String imageData;
-    @ManyToOne
-    @JoinColumn(name = "product_id",nullable = false)
-    Product product;
+//    @ManyToOne
+//    @JoinColumn(name = "product_id",nullable = false)
+//    Product product;
 }

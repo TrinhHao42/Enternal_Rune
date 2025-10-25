@@ -47,19 +47,21 @@ public class Product {
     @Column(name = "product_rating")
     double prodRating;
 
-    @ManyToOne
-    @JoinColumn(name = "brand_id", nullable = false)
-    Brand prodBrand;
+//    @ManyToOne
+//    @JoinColumn(name = "brand_id", nullable = false)
+//    Brand prodBrand;
 
 //    @OneToMany(mappedBy = "ciProduct", cascade = CascadeType.ALL, orphanRemoval = true)
 //    List<CartItem> cartItems;
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "product_id")
     List<Image> images;
 
     @OneToMany(mappedBy = "cmProduct", cascade = CascadeType.ALL, orphanRemoval = true)
     List<Comment> comments = new ArrayList<>();
 
-    @OneToMany(mappedBy = "ppProduct", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "product_id")
     List<ProductPrice> productPrices = new ArrayList<>();
 
 //    @OneToMany(mappedBy = "odProduct", cascade = CascadeType.ALL, orphanRemoval = true)

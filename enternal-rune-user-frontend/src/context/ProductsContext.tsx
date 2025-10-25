@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react"
 import { Product } from "@/types/Product"
+import AxiosInstance from "@/configs/AxiosInstance"
 
 type ProductsContextType = {
     products: Product[]
@@ -22,26 +23,14 @@ export const ProductsProvider = ({ children }: { children: ReactNode }) => {
         setError(null)
 
         try {
-            // Fetch products from db.json which already includes prices
-            const productsRes = await fetch("http://localhost:3001/products")
-
-            if (!productsRes.ok) {
+            const productsRes = await AxiosInstance.get("/products/top-brand")
+            if (!productsRes || productsRes.status !== 200) {
                 throw new Error("Không thể tải dữ liệu sản phẩm.")
             }
-
-            const productsData: Product[] = await productsRes.json()
-
-            // Products already have prodPrice from db.json, just calculate original price
-            const processedProducts: Product[] = productsData.map((prod) => ({
-                ...prod,
-                prodOriginalPrice: prod.prodPrice ? prod.prodPrice * 1.15 : 0, // Giá gốc (tăng 15%)
-            }))
-
-            setProducts(processedProducts)
+            setProducts(productsRes.data)
         } catch (err) {
-            const message = err instanceof Error ? err.message : "Lỗi không xác định khi tải dữ liệu"
-            console.error("Error fetching products:", message)
-            setError(message)
+            console.error("Error fetching products:", err)
+            setError(err instanceof Error ? err.message : "Lỗi không xác định khi tải dữ liệu")
         } finally {
             setLoading(false)
         }

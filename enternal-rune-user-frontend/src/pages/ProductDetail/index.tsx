@@ -18,7 +18,7 @@ export default function ProductDetail() {
     if (params?.id && products.length > 0) {
       // Convert ID to string for comparison since our Product type uses string ID
       const productId = params.id as string
-      const foundProduct = products.find(p => String(p.id) === productId)
+      const foundProduct = products.find(p => String(p.prodId) === productId)
       setProduct(foundProduct)
     }
   }, [params?.id, products])
@@ -52,7 +52,7 @@ export default function ProductDetail() {
     )
   }
 
-  const images = product.prodImg?.map(img => img.imgData) || ['/images/iphone.png']
+  const images = product.images?.map(img => img.imageData) || ['/images/iphone.png']
   
   // Chuyển đổi prodSpecs từ product sang định dạng phù hợp cho SpecificationsSection
   const getSpecificationsForDisplay = (prodSpecs?: { [key: string]: string | number | boolean }) => {

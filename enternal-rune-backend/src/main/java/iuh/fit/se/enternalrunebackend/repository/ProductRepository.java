@@ -1,10 +1,42 @@
 package iuh.fit.se.enternalrunebackend.repository;
 
 import iuh.fit.se.enternalrunebackend.entity.Product;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+import java.util.List;
 
 @RepositoryRestResource(path = "products")
 public interface ProductRepository extends JpaRepository<Product,Integer> {
+
+    @Query("""
+    SELECT p FROM Product p
+    JOIN FETCH p.productPrices pp
+    WHERE pp.ppPriceStatus = 'ACTIVE'
+""")
+    List<Product> findAllWithActivePrice();
+
+    @Query(value = """
+    SELECT p.*
+    FROM products p
+    JOIN product_price pp ON pp.product_id = p.prod_id
+    JOIN brands b ON b.brand_id = p.brand_id
+    WHERE pp.pp_price_status = 'ACTIVE'
+      AND pp.pp_start_date = (
+          SELECT MAX(pp2.pp_start_date)
+          FROM product_price pp2
+          JOIN products p2 ON p2.prod_id = pp2.product_id
+          WHERE pp2.pp_price_status = 'ACTIVE'
+            AND p2.brand_id = p.brand_id
+      )
+    GROUP BY b.brand_id, p.prod_id
+    ORDER BY p.product_rating DESC
+    """, nativeQuery = true)
+    List<Product> findFeaturedProducts(Pageable pageable);
+
+
 
 }

@@ -19,7 +19,7 @@ export default function ProductInfoPanel({ product }: ProductInfoPanelProps) {
         { duration: '3 years', price: 199000 }
     ]
     const [selectedPlan, setSelectedPlan] = useState<string>('')
-    const basePrice = product.prodPrice || 0
+    const basePrice = product.productPrices?.[0]?.ppPrice || 0
     const storagePrice = selectedStorage === '256GB' ? -100 : selectedStorage === '1TB' ? 200 : 0
     const currentPrice = basePrice + storagePrice
     const currentPlanPrice = protectionPlans.find(p => p.duration === selectedPlan)?.price || 0
@@ -27,6 +27,7 @@ export default function ProductInfoPanel({ product }: ProductInfoPanelProps) {
     const unitPrice = currentPrice + currentPlanPrice
     // total price depends on quantity
     const totalPrice = unitPrice * quantity
+    const originalPrice = basePrice * 1.15
 
     const handleQuantityChange = (change: number) => {
         setQuantity(prev => Math.max(1, Math.min(10, prev + change)))
@@ -76,14 +77,14 @@ export default function ProductInfoPanel({ product }: ProductInfoPanelProps) {
                 <span className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                     {formatPrice(totalPrice)}
                 </span>
-                {product.prodOriginalPrice && product.prodOriginalPrice > unitPrice && (
+                {originalPrice > unitPrice && (
                     <span className="text-xl text-gray-400 line-through">
-                        {formatPrice(product.prodOriginalPrice * quantity)}
+                        {formatPrice(originalPrice * quantity)}
                     </span>
                 )}
-                {product.prodOriginalPrice && product.prodOriginalPrice > unitPrice && (
+                {originalPrice > unitPrice && (
                     <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        Tiết kiệm {formatPrice((product.prodOriginalPrice - unitPrice) * quantity)}
+                        Tiết kiệm {formatPrice((originalPrice - unitPrice) * quantity)}
                     </span>
                 )}
             </div>
@@ -182,7 +183,7 @@ export default function ProductInfoPanel({ product }: ProductInfoPanelProps) {
                         <div className="flex items-center gap-2">
                             <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                             <span className="text-green-800 font-semibold text-sm">
-                                {product.prodStatus === 'ACTIVE' ? 'Còn hàng' : 'Hết hàng'}
+                                {product.productStatus === 'ACTIVE' ? 'Còn hàng' : 'Hết hàng'}
                             </span>
                         </div>
                     </div>
