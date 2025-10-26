@@ -49,18 +49,15 @@ public class SePayServiceImpl implements SePayService {
         return orderRepository.checkOrderStatusById(id);
     }
 
-    public boolean sePayWebHook(TransactionRequest transactionRequest) {
+    public TransactionRequest sePayWebHook(TransactionRequest transactionRequest) {
         Transaction newTransaction = new Transaction();
 
         newTransaction.setTransGateway(transactionRequest.getGateway());
         newTransaction.setTransDate(transactionRequest.getTransactionDate().toLocalDate());
         newTransaction.setTransAccountNumber(transactionRequest.getAccountNumber());
-        newTransaction.setTransSubAccount(transactionRequest.getSubAccount());
-        newTransaction.setTransCode(transactionRequest.getCode());
         newTransaction.setTransContent(transactionRequest.getContent());
         newTransaction.setTransReferenceNumber(transactionRequest.getReferenceCode());
         newTransaction.setTransBody(transactionRequest.getDescription());
-        newTransaction.setTransAccumulated(transactionRequest.getAccumulated() != null ? transactionRequest.getAccumulated() : BigDecimal.ZERO);
         newTransaction.setTransCreatedAt(transactionRequest.getTransactionDate().toLocalDate());
 
         if (transactionRequest.getTransferType().equals("in")) {
@@ -70,14 +67,14 @@ public class SePayServiceImpl implements SePayService {
             newTransaction.setTransAmountOut(transactionRequest.getTransferAmount());
         }
 
-        Transaction transactionSaved = transactionRepository.save(newTransaction);
+//        Transaction transactionSaved = transactionRepository.save(newTransaction);
+//
+//        int row = 0;
+//        if (transactionSaved != null) {
+//            row = orderRepository.updateOrderStatusByID(transactionSaved.getTransId(), transactionSaved.getTransAmountIn(), PaymentStatus.PAID, PaymentStatus.PENDING);
+//        }
 
-        int row = 0;
-        if (transactionSaved != null) {
-            row = orderRepository.updateOrderStatusByID(transactionSaved.getTransId(), transactionSaved.getTransAmountIn(), PaymentStatus.PAID, PaymentStatus.PENDING);
-        }
-
-        return row > 0;
+        return transactionRequest;
     }
 
     public Order createOrder(Order orderInformation) {

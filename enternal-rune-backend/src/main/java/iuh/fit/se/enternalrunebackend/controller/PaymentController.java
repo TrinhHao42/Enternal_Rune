@@ -54,8 +54,8 @@ public class PaymentController {
         return sePayService.getOrderStatus(id);
     }
 
-    @PostMapping("/payment")
-    public boolean Payment(@RequestBody TransactionRequest transactionRequest) {
+    @PostMapping("/webhook")
+    public TransactionRequest Payment(@RequestBody TransactionRequest transactionRequest) {
         return sePayService.sePayWebHook(transactionRequest);
     }
 }

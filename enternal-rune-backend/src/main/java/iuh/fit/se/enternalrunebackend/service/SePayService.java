@@ -10,6 +10,6 @@ import java.io.IOException;
 public interface SePayService {
     QRCodeResponse getQRCode(double amount, String description) throws IOException;
     PaymentStatus getOrderStatus(int id);
-    boolean sePayWebHook(TransactionRequest transactionRequest);
+    TransactionRequest sePayWebHook(TransactionRequest transactionRequest);
     Order createOrder(Order orderInformation);
 }
