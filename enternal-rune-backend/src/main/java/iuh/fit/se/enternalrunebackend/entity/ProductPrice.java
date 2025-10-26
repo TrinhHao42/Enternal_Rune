@@ -23,6 +23,7 @@ public class ProductPrice {
     int ppId;
     @Column(name = "pp_price")
     double ppPrice;
+    @Enumerated(EnumType.STRING)
     @Column(name="pp_price_status")
     PriceStatus ppPriceStatus;
     @Column(name = "pp_start_date")
@@ -34,7 +35,7 @@ public class ProductPrice {
     @JoinColumn(name="product_id",nullable = false)
     Product ppProduct;
     @ManyToOne
-    @JoinColumn(name="discount_id",nullable = false)
+    @JoinColumn(name="discount_id")
     Discount discount;
     @OneToMany(mappedBy = "odPrice", cascade = CascadeType.ALL)
     List<OrderDetail> orderDetails = new ArrayList<>();
