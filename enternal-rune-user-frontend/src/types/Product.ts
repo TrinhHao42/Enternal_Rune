@@ -1,3 +1,4 @@
+import { Brand } from "./Brand";
 import { Image } from "./Image";
 import { ProductPrice } from "./ProductPrice";
 
@@ -20,4 +21,5 @@ export type Product = {
   prodRating: number
   productPrices?: ProductPrice[]
   comments: Comment[]
+  prodBrand?: Brand
 }

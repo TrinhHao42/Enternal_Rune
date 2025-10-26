@@ -1,5 +1,6 @@
 package iuh.fit.se.enternalrunebackend.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import iuh.fit.se.enternalrunebackend.entity.enums.ProductStatus;
 import jakarta.persistence.*;
 import lombok.*;
@@ -47,9 +48,9 @@ public class Product {
     @Column(name = "product_rating")
     double prodRating;
 
-//    @ManyToOne
-//    @JoinColumn(name = "brand_id", nullable = false)
-//    Brand prodBrand;
+    @ManyToOne
+    @JoinColumn(name = "brand_id", nullable = false)
+    Brand prodBrand;
 
 //    @OneToMany(mappedBy = "ciProduct", cascade = CascadeType.ALL, orphanRemoval = true)
 //    List<CartItem> cartItems;
