@@ -6,11 +6,12 @@ import lombok.Getter;
 import lombok.experimental.FieldDefaults;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 @AllArgsConstructor
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class QRCodeRequest implements Serializable {
-    double amount;
+    BigDecimal amount;
     String description;
 }

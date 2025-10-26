@@ -32,7 +32,7 @@ public class SePayServiceImpl implements SePayService {
     @Autowired
     private TransactionRepository transactionRepository;
 
-    public QRCodeResponse getQRCode(double amount, String description) throws IOException {
+    public QRCodeResponse getQRCode(BigDecimal amount, String description) throws IOException {
         String url = generateQRURL.getQRURL(qrConfig, amount, description);
 
         RestTemplate restTemplate = new RestTemplate();
