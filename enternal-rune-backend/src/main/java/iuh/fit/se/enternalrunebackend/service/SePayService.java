@@ -6,9 +6,10 @@ import iuh.fit.se.enternalrunebackend.entity.Order;
 import iuh.fit.se.enternalrunebackend.entity.enums.PaymentStatus;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 
 public interface SePayService {
-    QRCodeResponse getQRCode(double amount, String description) throws IOException;
+    QRCodeResponse getQRCode(BigDecimal amount, String description) throws IOException;
     PaymentStatus getOrderStatus(int id);
     boolean sePayWebHook(TransactionRequest transactionRequest);
     Order createOrder(Order orderInformation);

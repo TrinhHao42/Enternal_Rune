@@ -32,9 +32,8 @@ public class SePayServiceImpl implements SePayService {
     @Autowired
     private TransactionRepository transactionRepository;
 
-    public QRCodeResponse getQRCode(double amount, String description) throws IOException {
+    public QRCodeResponse getQRCode(BigDecimal amount, String description) throws IOException {
         String url = generateQRURL.getQRURL(qrConfig, amount, description);
-
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<byte[]> response = restTemplate.getForEntity(url, byte[].class);
 
@@ -60,7 +59,7 @@ public class SePayServiceImpl implements SePayService {
         newTransaction.setTransContent(transactionRequest.getContent());
         newTransaction.setTransReferenceNumber(transactionRequest.getReferenceCode());
         newTransaction.setTransBody(transactionRequest.getDescription());
-        newTransaction.setTransAccumulated(transactionRequest.getAccumulated() != null ? transactionRequest.getAccumulated() : BigDecimal.ZERO);
+        newTransaction.setTransAccumulated(transactionRequest.getAccumulated());
         newTransaction.setTransCreatedAt(transactionRequest.getTransactionDate().toLocalDate());
 
         if (transactionRequest.getTransferType().equals("in")) {
@@ -73,9 +72,7 @@ public class SePayServiceImpl implements SePayService {
         Transaction transactionSaved = transactionRepository.save(newTransaction);
 
         int row = 0;
-        if (transactionSaved != null) {
-            row = orderRepository.updateOrderStatusByID(transactionSaved.getTransId(), transactionSaved.getTransAmountIn(), PaymentStatus.PAID, PaymentStatus.PENDING);
-        }
+        row = orderRepository.updateOrderStatusByID(transactionSaved.getTransId(), transactionSaved.getTransAmountIn(), PaymentStatus.PAID, PaymentStatus.PENDING);
 
         return row > 0;
     }
