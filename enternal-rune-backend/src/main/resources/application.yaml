@@ -36,7 +36,7 @@ spring:
             token-uri: https://oauth2.googleapis.com/token
             user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
             jwk-set-uri: https://www.googleapis.com/oauth2/v3/certs
-#            authorization-code-response-type: code
+          #  authorization-code-response-type: code
             user-name-attribute: sub
 
   mail:
@@ -50,6 +50,7 @@ spring:
       mail.smtp.starttls.enable: true
       mail.smtp.starttls.required: true
       mail.smtp.ssl.trust: smtp.gmail.com
+
 qr:
   acc: ${QR_ACC}
   bank: ${QR_BANK}
@@ -58,7 +59,6 @@ qr:
 
 sepay:
   api: ${SEPAY_API}
-
 
 server:
   port: 8080
