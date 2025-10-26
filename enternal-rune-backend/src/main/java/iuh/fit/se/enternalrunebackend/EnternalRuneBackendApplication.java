@@ -9,5 +9,4 @@ public class EnternalRuneBackendApplication {
     public static void main(String[] args) {
         SpringApplication.run(EnternalRuneBackendApplication.class, args);
     }
-
 }
