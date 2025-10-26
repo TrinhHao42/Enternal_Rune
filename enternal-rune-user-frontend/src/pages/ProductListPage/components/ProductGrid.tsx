@@ -1,12 +1,36 @@
 import React from 'react'
 import { Product } from '@/types/Product'
 import ProductCard from '../../../components/ProductCard'
+import { useProductList } from '@/context/ProductListContext'
+import { ProductGridSkeleton } from '@/components/LoadingSkeleton'
 
 interface ProductGridProps {
   products: Product[]
 }
 
 export default function ProductGrid({ products }: ProductGridProps) {
+  const { isLoading, error } = useProductList()
+
+  // Loading state
+  if (isLoading) {
+    return <ProductGridSkeleton count={6} />
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className="col-span-full flex flex-col items-center justify-center py-20">
+        <div className="text-red-400 mb-4">
+          <svg className="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 className="text-xl font-semibold text-red-700 mb-2">Có lỗi xảy ra</h3>
+        <p className="text-red-500 text-center">{error}</p>
+      </div>
+    )
+  }
+
   if (products.length === 0) {
     return (
       <div className="col-span-full flex flex-col items-center justify-center py-20">
@@ -24,7 +48,7 @@ export default function ProductGrid({ products }: ProductGridProps) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <ProductCard key={product.prodId} product={product} />
       ))}
     </div>
   )
