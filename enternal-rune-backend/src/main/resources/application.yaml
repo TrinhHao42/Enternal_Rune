@@ -16,8 +16,17 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
-  main:
-    allow-circular-references: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: eternalrune.comerce@gmail.com
+    password: cxae xnjb smfw yedu
+    protocol: smtp
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+    default-encoding: UTF-8
 
   security:
     oauth2:
@@ -36,20 +45,8 @@ spring:
             token-uri: https://oauth2.googleapis.com/token
             user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
             jwk-set-uri: https://www.googleapis.com/oauth2/v3/certs
-#            authorization-code-response-type: code
             user-name-attribute: sub
 
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: eternalrune.comerce@gmail.com
-    password: cxae xnjb smfw yedu
-    protocol: smtp
-    properties:
-      mail.smtp.auth: true
-      mail.smtp.starttls.enable: true
-      mail.smtp.starttls.required: true
-      mail.smtp.ssl.trust: smtp.gmail.com
 qr:
   acc: ${QR_ACC}
   bank: ${QR_BANK}

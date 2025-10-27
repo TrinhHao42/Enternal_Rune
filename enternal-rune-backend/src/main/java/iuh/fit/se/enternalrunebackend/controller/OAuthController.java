@@ -21,7 +21,7 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequestMapping("/api/oauth")
-@CrossOrigin(origins = {"http://localhost:5173"})
+@CrossOrigin(origins = {"http://localhost:3000"})
 public class OAuthController {
 
     @Value("${spring.security.oauth2.client.registration.google.client-id}")
