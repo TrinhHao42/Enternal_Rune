@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from "react";
-import CartItem from "@/app/types/CartItem";
+import { CartItem } from "@/types/CartItem";
 import { createContext, useContextSelector } from "use-context-selector";
 import { useDebouncedCallback } from "use-debounce";
 import AxiosInstance from "@/configs/AxiosInstance";

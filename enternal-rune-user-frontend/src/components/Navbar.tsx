@@ -7,7 +7,7 @@ import { Menu, X } from 'lucide-react'
 export const Navbar = () => {
     const [open, setOpen] = useState(false)
     return (
-        <header className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-6 w-full border-b border-gray-200">
+        <header className="flex items-center justify-between z-30 px-6 md:px-16 lg:px-24 xl:px-32 py-6 w-full border-b border-gray-200">
             <Link href="/">
                 <Image src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/dummyLogo/prebuiltuiDummyLogo.svg" alt="Logo" width={100} height={100} />
             </Link>
