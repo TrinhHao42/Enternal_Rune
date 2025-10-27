@@ -6,22 +6,63 @@ import ProductImageGallery from '@/pages/ProductDetail/ProductImageGallery'
 import ProductInfoPanel from '@/pages/ProductDetail/ProductInfoPanel'
 import SpecificationsSection from '@/pages/ProductDetail/SpecificationsSection'
 import { Product } from '@/types/Product'
-import { useProducts } from '@/context/ProductsContext'
 import { renderBestSellers } from '../Home/components/ProductList'
+import { ProductService } from '@/services/productService'
+
+const RelatedProducts = () => {
+  const [items, setItems] = useState<Product[]>([])
+
+  useEffect(() => {
+    let mounted = true
+    ProductService.getFilteredProducts({ page: 0, size: 4 })
+      .then(data => { if (mounted) setItems(data) })
+      .catch(() => { })
+    return () => { mounted = false }
+  }, [])
+
+  return (
+    <div className="pt-6">
+      {renderBestSellers(items, false)}
+    </div>
+  )
+}
 
 export default function ProductDetail() {
   const params = useParams()
-  const { products, loading, error } = useProducts()
-  const [product, setProduct] = useState<Product>()
+  const [product, setProduct] = useState<Product | undefined>()
+  const [loading, setLoading] = useState<boolean>(true)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    if (params?.id && products.length > 0) {
-      // Convert ID to string for comparison since our Product type uses string ID
-      const productId = params.id as string
-      const foundProduct = products.find(p => String(p.id) === productId)
-      setProduct(foundProduct)
+    const id = params?.id as string | undefined
+    if (!id) {
+      setError('ID sản phẩm không hợp lệ')
+      setLoading(false)
+      return
     }
-  }, [params?.id, products])
+
+    let mounted = true
+    setLoading(true)
+    ProductService.getProductById(id)
+      .then(p => {
+        if (!mounted) return
+        if (!p) setError('Sản phẩm không tồn tại')
+        setProduct(p || undefined)
+      })
+      .catch(err => {
+        console.error(err)
+        if (!mounted) return
+        setError(err instanceof Error ? err.message : 'Lỗi khi tải sản phẩm')
+      })
+      .finally(() => {
+        if (!mounted) return
+        setLoading(false)
+      })
+
+    return () => {
+      mounted = false
+    }
+  }, [params?.id])
 
 
   if (loading) {
@@ -52,16 +93,15 @@ export default function ProductDetail() {
     )
   }
 
-  const images = product.prodImg?.map(img => img.imgData) || ['/images/iphone.png']
-  
+  const images = product?.images?.map(img => img.imageData) || ['/images/iphone.png']
+
   // Chuyển đổi prodSpecs từ product sang định dạng phù hợp cho SpecificationsSection
   const getSpecificationsForDisplay = (prodSpecs?: { [key: string]: string | number | boolean }) => {
     if (!prodSpecs) return {}
-    
-    // Chuyển đổi các key thành tên hiển thị tiếng Việt và đảm bảo values là string
+
     const displayMap: { [key: string]: string } = {
       screenSize: 'Kích thước màn hình',
-      displayTech: 'Công nghệ màn hình', 
+      displayTech: 'Công nghệ màn hình',
       resolution: 'Độ phân giải',
       displayFeatures: 'Tính năng màn hình',
       rearCamera: 'Camera sau',
@@ -76,19 +116,19 @@ export default function ProductDetail() {
       nfcTech: 'Công nghệ NFC',
       cm_bin: 'Cảm Biến'
     }
-    
+
     const specifications: Record<string, string> = {}
-    
+
     Object.entries(prodSpecs).forEach(([key, value]) => {
       const displayKey = displayMap[key] || key
       const displayValue = String(value)
       specifications[displayKey] = displayValue
     })
-    
+
     return specifications
   }
 
-  const specifications = getSpecificationsForDisplay(product.prodSpecs)
+  const specifications = getSpecificationsForDisplay(product?.prodSpecs)
 
   return (
     <div className="container mx-auto px-20 py-6">
@@ -124,8 +164,8 @@ export default function ProductDetail() {
           <p className="text-gray-500 mt-4">Đang tải thông tin sản phẩm...</p>
         </div>
       )}
-      
-      {renderBestSellers(products, true)}
+      <RelatedProducts />
     </div>
   )
 }
+

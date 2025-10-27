@@ -5,8 +5,9 @@
 
 "use client"
 
-import React, { createContext, useContext, useState, useMemo, ReactNode, useEffect } from 'react'
+import React, { createContext, useContext, useState, useMemo, ReactNode, useEffect, useCallback } from 'react'
 import { Product } from '@/types/Product'
+import { ProductService, FilterParams } from '@/services/productService'
 
 // Filter state interface
 export interface FilterState {
@@ -34,16 +35,19 @@ interface ProductListContextType {
   totalPages: number
   itemsPerPage: number
   totalFilteredItems: number
+  isLoading: boolean
+  error: string | null
+  applyFilters: (filterState: FilterState) => Promise<void>
+  resetFilters: () => void
 }
 
 const ProductListContext = createContext<ProductListContextType | undefined>(undefined)
 
 interface ProductListProviderProps {
   children: ReactNode
-  products: Product[]
 }
 
-export const ProductListProvider = ({ children, products }: ProductListProviderProps) => {
+export const ProductListProvider = ({ children }: ProductListProviderProps) => {
   const [filters, setFilters] = useState<FilterState>({
     brands: [],
     priceRanges: [],
@@ -52,77 +56,118 @@ export const ProductListProvider = ({ children, products }: ProductListProviderP
     colors: [],
     inStock: null
   })
-  
+
   const [sortOption, setSortOption] = useState<SortOption>('popular')
   const [currentPage, setCurrentPage] = useState(1)
-  const itemsPerPage = 9
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [apiProducts, setApiProducts] = useState<Product[]>([])
+  const itemsPerPage = 6
 
-  // Apply filters
+  // Apply filters via API
+  const applyFilters = useCallback(async (filterState: FilterState) => {
+    setIsLoading(true)
+    setError(null)
+
+    try {
+      // Kiểm tra có filter nào được áp dụng không
+      const hasFilters =
+        filterState.brands.length > 0 ||
+        filterState.priceRanges.length > 0 ||
+        filterState.colors.length > 0 ||
+        filterState.memory.length > 0
+
+      if (hasFilters) {
+        // Gọi API để filter
+        const filterParams: FilterParams = {
+          brands: filterState.brands.length > 0 ? filterState.brands : undefined,
+          priceRange: filterState.priceRanges.length > 0 ? filterState.priceRanges : undefined,
+          colors: filterState.colors.length > 0 ? filterState.colors : undefined,
+          memory: filterState.memory.length > 0 ? filterState.memory : undefined,
+          page: 0,
+          size: 100
+        }
+
+        const result = await ProductService.getFilteredProducts(filterParams)
+        setApiProducts(result)
+      } else {
+        // No filters: fetch default product list from API
+        const result = await ProductService.getFilteredProducts({ page: 0, size: 100 })
+        setApiProducts(result)
+      }
+
+      setFilters(filterState)
+      setCurrentPage(1)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Đã xảy ra lỗi khi lọc sản phẩm')
+      console.error('Error applying filters:', err)
+    } finally {
+      setIsLoading(false)
+    }
+  }, [])
+
+  // Reset filters
+  const resetFilters = useCallback(() => {
+    const resetState: FilterState = {
+      brands: [],
+      priceRanges: [],
+      features: [],
+      memory: [],
+      colors: [],
+      inStock: null
+    }
+
+    setFilters(resetState)
+    // Reset triggers refetch of default API list
+    ProductService.getFilteredProducts({ page: 1, size: 100 })
+      .then(setApiProducts)
+      .catch(err => setError(err instanceof Error ? err.message : 'Đã xảy ra lỗi'))
+    setCurrentPage(1)
+    setError(null)
+  }, [])
+
+  // Chọn products để sử dụng (API hoặc local)
+  const activeProducts = apiProducts
+
+  // Initial load: fetch default products from API
+  useEffect(() => {
+    let mounted = true
+    setIsLoading(true)
+    ProductService.getFilteredProducts({ page: 0, size: 100 })
+      .then(data => {
+        if (!mounted) return
+        setApiProducts(data)
+      })
+      .catch(err => {
+        if (!mounted) return
+        setError(err instanceof Error ? err.message : 'Đã xảy ra lỗi khi tải sản phẩm')
+      })
+      .finally(() => {
+        if (!mounted) return
+        setIsLoading(false)
+      })
+
+    return () => {
+      mounted = false
+    }
+  }, [])
+
+  // When using API-only, server returns filtered products. Use server results as-is.
   const filteredProducts = useMemo(() => {
-    let result = [...products]
-
-    // Filter by brands
-    if (filters.brands.length > 0) {
-      result = result.filter(p => filters.brands.includes(p.prodBrand || 0))
-    }
-
-    // Filter by price ranges
-    if (filters.priceRanges.length > 0) {
-      result = result.filter(p => {
-        const price = p.prodPrice || 0
-        return filters.priceRanges.some(range => {
-          switch (range) {
-            case 'under-5m':
-              return price < 5000000
-            case '5m-10m':
-              return price >= 5000000 && price < 10000000
-            case '10m-15m':
-              return price >= 10000000 && price < 15000000
-            case '15m-20m':
-              return price >= 15000000 && price < 20000000
-            case 'over-20m':
-              return price >= 20000000
-            default:
-              return true
-          }
-        })
-      })
-    }
-
-    // Filter by colors
-    if (filters.colors.length > 0) {
-      result = result.filter(p => 
-        p.prodColor?.some(color => filters.colors.includes(color))
-      )
-    }
-
-    // Filter by memory/storage
-    if (filters.memory.length > 0) {
-      result = result.filter(p => {
-        const storage = String(p.prodSpecs?.storage || '')
-        return filters.memory.some(mem => storage.includes(mem))
-      })
-    }
-
-    // Filter by stock status
-    if (filters.inStock !== null) {
-      result = result.filter(p => p.prodStatus === 'ACTIVE')
-    }
-
-    return result
-  }, [products, filters])
+    return [...activeProducts]
+  }, [activeProducts])
 
   // Apply sorting
   const sortedProducts = useMemo(() => {
     const sorted = [...filteredProducts]
-    
+
     switch (sortOption) {
       case 'price-asc':
-        return sorted.sort((a, b) => (a.prodPrice || 0) - (b.prodPrice || 0))
+        return sorted.sort((a, b) => (a.productPrices?.[0].ppPrice || 0) - (b.productPrices?.[0].ppPrice || 0))
       case 'price-desc':
-        return sorted.sort((a, b) => (b.prodPrice || 0) - (a.prodPrice || 0))
+        return sorted.sort((a, b) => (b.productPrices?.[0].ppPrice || 0) - (a.productPrices?.[0].ppPrice || 0))
       case 'newest':
-        return sorted.sort((a, b) => Number(b.id) - Number(a.id))
+        return sorted.sort((a, b) => Number(b.prodId) - Number(a.prodId))
       case 'popular':
       default:
         return sorted.sort((a, b) => (b.prodRating || 0) - (a.prodRating || 0))
@@ -131,7 +176,7 @@ export const ProductListProvider = ({ children, products }: ProductListProviderP
 
   // Pagination
   const totalPages = Math.ceil(sortedProducts.length / itemsPerPage)
-  
+
   const paginatedProducts = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage
     const endIndex = startIndex + itemsPerPage
@@ -144,7 +189,7 @@ export const ProductListProvider = ({ children, products }: ProductListProviderP
   }, [filters, sortOption])
 
   const value: ProductListContextType = {
-    products,
+    products: activeProducts,
     filteredProducts: sortedProducts,
     paginatedProducts,
     filters,
@@ -155,7 +200,11 @@ export const ProductListProvider = ({ children, products }: ProductListProviderP
     setCurrentPage,
     totalPages,
     itemsPerPage,
-    totalFilteredItems: sortedProducts.length
+    totalFilteredItems: sortedProducts.length,
+    isLoading,
+    error,
+    applyFilters,
+    resetFilters
   }
 
   return (
