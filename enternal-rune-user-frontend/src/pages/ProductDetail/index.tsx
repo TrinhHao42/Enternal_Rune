@@ -11,6 +11,7 @@ import { ProductService } from '@/services/productService'
 
 const RelatedProducts = () => {
   const [items, setItems] = useState<Product[]>([])
+
   useEffect(() => {
     let mounted = true
     ProductService.getFilteredProducts({ page: 0, size: 4 })
