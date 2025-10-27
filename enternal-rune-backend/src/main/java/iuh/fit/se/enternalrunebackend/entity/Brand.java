@@ -1,5 +1,6 @@
 package iuh.fit.se.enternalrunebackend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -34,8 +35,8 @@ public class Brand {
 
     @Column(name = "brand_status", length = 20)
     private String brandStatus;
-    @Column(name = "created_at")
-    LocalDate createdAt = LocalDate.now();
-    @OneToMany(mappedBy = "prodBrand", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JoinColumn(name = "brand_id")
     private List<Product> products = new ArrayList<>();
 }

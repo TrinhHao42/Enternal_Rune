@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import { ProductListProvider, useProductList } from '@/context/ProductListContext'
-import { useProducts } from '@/context/ProductsContext'
 import FilterSidebar from '@/pages/ProductListPage/components/FilterSidebar'
 import SortDropdown from '@/pages/ProductListPage/components/SortDropdown'
 import ProductGrid from '@/pages/ProductListPage/components/ProductGrid'
@@ -71,32 +70,8 @@ const ProductListContent = () => {
 }
 
 export const ProductListPage = () => {
-  const { products, loading, error } = useProducts()
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
-          <p className="mt-4 text-gray-600">Đang tải sản phẩm...</p>
-        </div>
-      </div>
-    )
-  }
-
-  if (error) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">Có lỗi xảy ra</h1>
-          <p className="text-gray-600">{error}</p>
-        </div>
-      </div>
-    )
-  }
-
   return (
-    <ProductListProvider products={products}>
+    <ProductListProvider>
       <ProductListContent />
     </ProductListProvider>
   )

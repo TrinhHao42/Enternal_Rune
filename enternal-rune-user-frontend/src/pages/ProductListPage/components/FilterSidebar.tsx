@@ -5,30 +5,45 @@
 
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import FilterGroup, { FilterOption } from './FilterGroup'
 import { useProductList } from '@/context/ProductListContext'
 import { X } from 'lucide-react'
+import AxiosInstance from '@/configs/AxiosInstance'
+import { API_ROUTES } from '@/router/router'
 
-interface FilterSidebarProps {
+type FilterSidebarProps = {
   onClose?: () => void
   isMobile?: boolean
 }
+type BrandResponse = {
+  brandId: number
+  brandName: string
+}
 
 export default function FilterSidebar({ onClose, isMobile = false }: FilterSidebarProps) {
-  const { filters, setFilters } = useProductList()
-
-  // Local state for pending changes
+  const { filters, applyFilters, resetFilters, isLoading } = useProductList()
   const [localFilters, setLocalFilters] = useState(filters)
+  const [brandOptions, setBrandOptions] = useState<FilterOption[]>([])
+  const [isApplying, setIsApplying] = useState(false)
 
-  // Brand options
-  const brandOptions: FilterOption[] = [
-    { value: 9, label: 'Samsung', type: 'checkbox' },
-    { value: 1, label: 'Apple', type: 'checkbox' },
-    { value: 2, label: 'Xiaomi', type: 'checkbox' },
-    { value: 3, label: 'OPPO', type: 'checkbox' },
-    { value: 4, label: 'Vivo', type: 'checkbox' }
-  ]
+  useEffect(() => {
+    const fetchBrandOptions = async () => {
+      try {
+
+  const res = await AxiosInstance.get<BrandResponse[]>(API_ROUTES.BRANDS_NAMES)
+        const options = res.data.map((b) => ({
+          value: b.brandId,
+          label: b.brandName,
+          type: 'checkbox' as const
+        }))
+        setBrandOptions(options)
+      } catch (err) {
+        console.error(err)
+      }
+    }
+    fetchBrandOptions()
+  }, [])
 
   // Price range options
   const priceOptions: FilterOption[] = [
@@ -100,16 +115,23 @@ export default function FilterSidebar({ onClose, isMobile = false }: FilterSideb
   }
 
   // Apply filters
-  const handleApplyFilters = () => {
-    setFilters(localFilters)
-    if (isMobile && onClose) {
-      onClose()
+  const handleApplyFilters = async () => {
+    setIsApplying(true)
+    try {
+      await applyFilters(localFilters)
+      if (isMobile && onClose) {
+        onClose()
+      }
+    } catch (error) {
+      console.error('Error applying filters:', error)
+    } finally {
+      setIsApplying(false)
     }
   }
 
   // Reset filters
-  const handleResetFilters = () => {
-    const resetFilters = {
+  const handleResetFilters = async () => {
+    const resetFiltersData = {
       brands: [],
       priceRanges: [],
       features: [],
@@ -117,8 +139,12 @@ export default function FilterSidebar({ onClose, isMobile = false }: FilterSideb
       colors: [],
       inStock: null
     }
-    setLocalFilters(resetFilters)
-    setFilters(resetFilters)
+    setLocalFilters(resetFiltersData)
+    try {
+      await resetFilters()
+    } catch (error) {
+      console.error('Error resetting filters:', error)
+    }
   }
 
   const sidebarContent = (
@@ -176,10 +202,15 @@ export default function FilterSidebar({ onClose, isMobile = false }: FilterSideb
       <div className="p-4 border-t border-gray-200 space-y-2">
         <button
           onClick={handleApplyFilters}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl transition-colors"
+          disabled={isApplying || isLoading}
+          className={`w-full font-semibold py-3 px-4 rounded-xl transition-colors ${
+            isApplying || isLoading
+              ? 'bg-gray-400 cursor-not-allowed'
+              : 'bg-blue-600 hover:bg-blue-700 text-white'
+          }`}
           aria-label="Áp dụng bộ lọc"
         >
-          Áp dụng
+          {isApplying ? 'Đang áp dụng...' : 'Áp dụng'}
         </button>
         <button
           onClick={handleResetFilters}

@@ -11,6 +11,6 @@ import java.math.BigDecimal;
 public interface SePayService {
     QRCodeResponse getQRCode(BigDecimal amount, String description) throws IOException;
     PaymentStatus getOrderStatus(int id);
-    boolean sePayWebHook(TransactionRequest transactionRequest);
+    TransactionRequest sePayWebHook(TransactionRequest transactionRequest);
     Order createOrder(Order orderInformation);
 }
