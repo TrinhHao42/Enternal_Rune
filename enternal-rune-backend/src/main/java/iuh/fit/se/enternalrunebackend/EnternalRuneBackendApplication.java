@@ -12,5 +12,4 @@ public class EnternalRuneBackendApplication {
         TimeZone.setDefault(TimeZone.getTimeZone("Asia/Ho_Chi_Minh"));
         SpringApplication.run(EnternalRuneBackendApplication.class, args);
     }
-
 }
