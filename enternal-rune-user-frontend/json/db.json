@@ -23958,5 +23958,169 @@
       "ppEndDate": null,
       "ppProduct": 323
     }
-  ]
+  ],
+  "brand": [
+    {
+      "brandId": 1,
+      "brandName": "iPhone",
+      "brandDescription": "iPhone là dòng smartphone cao cấp do Apple phát triển, được ra mắt lần đầu vào năm 2007 với tuyên ngôn 'reinvent the phone' (tái định nghĩa điện thoại). Kể từ đó, iPhone đã trở thành biểu tượng của sự đổi mới trong thiết kế, trải nghiệm người dùng và hệ sinh thái khép kín, phần cứng, phần mềm, dịch vụ, tất cả được Apple kiểm soát chặt chẽ. Với iOS là hệ điều hành riêng, iPhone mang lại trải nghiệm mượt mà, đồng bộ cao với các thiết bị Apple khác (Mac, iPad, Watch, AirPods) và hệ sinh thái App Store mạnh mẽ. iPhone luôn đặt trọng tâm vào trải nghiệm người dùng, thiết kế tinh tế, hiệu năng cao, camera xuất sắc, bảo mật nghiêm ngặt và khả năng cập nhật lâu dài. Tầm nhìn của iPhone là trở thành thiết bị trung tâm trong cuộc sống số của người dùng — không chỉ là một chiếc điện thoại, mà là cầu nối cho mọi hoạt động từ giao tiếp, giải trí, làm việc đến dịch vụ thông minh. iPhone hướng tới sự đổi mới bền vững, chú trọng trải nghiệm cao cấp và xây dựng cộng đồng người dùng trung thành trên toàn cầu.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=iPhone%20logo&imgurl=https%3A%2F%2Fcdn-media.sforum.vn%2Fstorage%2Fapp%2Fmedia%2Fthunguyen%2Fy-nghia-logo-apple-2.jpg&imgrefurl=https%3A%2F%2Fcellphones.com.vn%2Fsforum%2Fy-nghia-logo-apple&docid=1rkznqG2j2DK8M&tbnid=lS4LcOOTc8APDM&vet=12ahUKEwiP3YCUy6-QAxV7z6ACHSxsALsQM3oECBsQAA..i&w=1200&h=675&hcb=2&ved=2ahUKEwiP3YCUy6-QAxV7z6ACHSxsALsQM3oECBsQAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 2,
+      "brandName": "ZTE",
+      "brandDescription": "ZTE là tập đoàn công nghệ đa quốc gia Trung Quốc, hoạt động mạnh trong lĩnh vực thiết bị viễn thông và thiết bị thông minh. Với kinh nghiệm lâu năm trong hạ tầng mạng, ZTE có lợi thế về khả năng tích hợp phần cứng, mạng, giải pháp công nghệ, cho phép hãng sản xuất smartphone có khả năng hỗ trợ mạng 5G, 6G và các công nghệ viễn thông mới. Trong mảng điện thoại, ZTE định hướng sản phẩm ở cả phân khúc trung, cao cấp với mục tiêu cân bằng hiệu năng, giá thành và độ ổn định. Sứ mệnh của ZTE là cung cấp giải pháp kết nối thông minh, giúp người dùng tiếp cận công nghệ mạng và truyền thông tiên tiến, đồng thời đóng góp vào phát triển hạ tầng số của các quốc gia đang phát triển.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Zte%20logo&imgurl=https%3A%2F%2Fcdn.tgdd.vn%2FFiles%2F2014%2F12%2F30%2F594153%2FImageAttach%2Fzte-logo-1-20141230124745.jpg&imgrefurl=https%3A%2F%2Fwww.thegioididong.com%2Ftin-tuc%2Fzte-cong-bo-logo-moi-nhin-thich-mat-hon-nhieu-594153&docid=VV5WnSFlFxA0tM&tbnid=dxzsWFZpEhbeOM&vet=12ahUKEwj_qbmky6-QAxWh4TgGHX4JL6MQM3oECB0QAA..i&w=640&h=335&hcb=2&ved=2ahUKEwj_qbmky6-QAxWh4TgGHX4JL6MQM3oECB0QAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 3,
+      "brandName": "Oppo",
+      "brandDescription": "OPPO được thành lập vào năm 2004 tại Trung Quốc bởi Tony Chen, và đến năm 2005 bắt đầu bước chân vào thị trường quốc tế. Với chiến lược sản phẩm đa dạng và mạnh mẽ trong kênh bán lẻ truyền thống, OPPO nhanh chóng mở rộng ra hơn 50 quốc gia trên thế giới. OPPO định vị mình là thương hiệu smartphone hướng đến người dùng trẻ trung, yêu thích thiết kế đẹp mắt, tính năng camera ấn tượng, trải nghiệm giải trí mượt mà. OPPO chú trọng vào việc đổi mới sáng tạo trong nhiếp ảnh (chế độ chụp đêm, camera ẩn, zoom quang học) và giao diện nâng cao. Tầm nhìn của OPPO là trở thành thương hiệu điện tử cá nhân dẫn đầu về trải nghiệm hình ảnh và thiết kế, đồng thời kết nối người dùng với nghệ thuật và công nghệ bằng những sản phẩm mang phong cách hiện đại và thông minh.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=oppo%20logo&imgurl=https%3A%2F%2Fstatic.wikia.nocookie.net%2Flogos%2Fimages%2F5%2F5f%2FOppo_2013_2.png%2Frevision%2Flatest%3Fcb%3D20230414094526%26path-prefix%3Dvi&imgrefurl=https%3A%2F%2Flogos.fandom.com%2Fvi%2Fwiki%2FOppo&docid=AHs7iNbREcn96M&tbnid=3q328o6zjccqKM&vet=12ahUKEwjJzeWyy6-QAxVYzDgGHXASA2wQM3oECBcQAA..i&w=640&h=398&hcb=2&ved=2ahUKEwjJzeWyy6-QAxVYzDgGHXASA2wQM3oECBcQAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 4,
+      "brandName": "OnePlus",
+      "brandDescription": "OnePlus ra đời với khẩu hiệu 'Never Settle' (Không bao giờ hài lòng), thể hiện tinh thần không ngừng cải tiến và không chấp nhận sự tầm thường. OnePlus hướng đến việc mang trải nghiệm 'flagship killer' — hiệu năng mạnh, mượt mà và tối ưu hệ thống — đến gần hơn với người dùng, với mức giá hợp lý hơn nhiều dòng flagship cao cấp. OnePlus xây dựng hình ảnh thương hiệu dựa trên cộng đồng người dùng tích cực, phản hồi nhanh và thử nghiệm phiên bản beta để tối ưu trải nghiệm. Hãng ưu tiên hiệu năng, tối ưu điện năng, hệ thống cập nhật nhanh và ổn định. Tầm nhìn của OnePlus là trở thành thương hiệu đi đầu trong trải nghiệm thông minh, nơi người dùng luôn được hưởng công nghệ tiên tiến nhất mà không phải trả giá quá cao — đồng thời giữ sự gắn kết với cộng đồng để liên tục hoàn thiện sản phẩm.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=OnePlus%20logo&imgurl=https%3A%2F%2F1000logos.net%2Fwp-content%2Fuploads%2F2022%2F11%2FOnePlus-Logo.jpg&imgrefurl=https%3A%2F%2F1000logos.net%2Foneplus-logo%2F&docid=QD_sIUO3cGqewM&tbnid=ffb8McDvy7iLkM&vet=12ahUKEwiGoIu-y6-QAxWl8DgGHUyiH9EQM3oECBUQAA..i&w=3840&h=2160&hcb=2&ved=2ahUKEwiGoIu-y6-QAxWl8DgGHUyiH9EQM3oECBUQAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 5,
+      "brandName": "Itel",
+      "brandDescription": "itel là thương hiệu smartphone hướng đến phân khúc phổ thông và giá rẻ, với phương châm 'công nghệ cho mọi người'. Hãng tập trung vào những điểm cốt lõi: thiết bị dễ dùng, cấu hình đủ để đáp ứng nhu cầu cơ bản, pin dung lượng cao và độ bền tốt. Đối với nhiều thị trường đang phát triển, itel đặt ưu tiên vào mạng lưới phân phối mạnh, dịch vụ hậu mãi địa phương, và hỗ trợ kỹ thuật trực tiếp. Sứ mệnh của itel là xóa bỏ rào cản công nghệ, giúp người dùng có ngân sách hạn chế vẫn tiếp cận được smartphone hiện đại, ổn định và an tâm sử dụng lâu dài.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Itel%20logo&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fd%2Fd9%2FItel-mobile-logo-vector.svg%2F2048px-Itel-mobile-logo-vector.svg.png&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AItel-mobile-logo-vector.svg&docid=E4UkmZowQP_s0M&tbnid=X_ESBqHEhIJpsM&vet=12ahUKEwjo9rLJy6-QAxWAzDgGHfkEA-0QM3oECBgQAA..i&w=2048&h=2048&hcb=2&ved=2ahUKEwjo9rLJy6-QAxWAzDgGHfkEA-0QM3oECBgQAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 6,
+      "brandName": "Huawei",
+      "brandDescription": "Huawei là tập đoàn công nghệ lớn của Trung Quốc, có thế mạnh về viễn thông, thiết bị mạng, chip và giải pháp doanh nghiệp. Trong lĩnh vực smartphone, Huawei nổi bật với các công nghệ camera cao cấp, ISP (xử lý hình ảnh), AI on-device và thiết kế tiên phong. Dù gặp nhiều thách thức từ các lệnh cấm quốc tế, Huawei vẫn phát triển hệ sinh thái riêng (HarmonyOS), phần mềm thay thế và giải pháp tích hợp để đảm bảo người dùng có trải nghiệm liền mạch. Tầm nhìn của Huawei là trở thành nhà cung cấp giải pháp số hàng đầu toàn cầu — không chỉ trong điện thoại mà còn trong mạng, điện toán đám mây, AI và thiết bị IoT. Huawei hướng tới sự tự chủ công nghệ và đổi mới trong mọi lĩnh vực.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Huawei%20logo&imgurl=https%3A%2F%2F1000logos.net%2Fwp-content%2Fuploads%2F2018%2F08%2FHuawei-Logo.png&imgrefurl=https%3A%2F%2F1000logos.net%2Fhuawei-logo%2F&docid=zv0K1w9UXfqXhM&tbnid=fiPfP35p2v0EiM&vet=12ahUKEwjG29jcy6-QAxUZ1zgGHcJJAPkQM3oECB0QAA..i&w=1920&h=1080&hcb=2&ved=2ahUKEwjG29jcy6-QAxUZ1zgGHcJJAPkQM3oECB0QAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 7,
+      "brandName": "Masstel",
+      "brandDescription": "Masstel là thương hiệu điện thoại nội địa tại Việt Nam, với DNA tập trung vào sự gần gũi, hỗ trợ kỹ thuật dễ dàng và giá phù hợp với người dùng trong nước. Masstel phát triển các dòng điện thoại phổ thông và smartphone với tiêu chí 'bền, ổn định, dễ dùng'. Điểm mạnh của Masstel nằm ở mạng lưới phân phối và dịch vụ hỗ trợ sau bán tốt trong nước, cũng như khả năng tùy biến theo nhu cầu người dùng Việt. Sứ mệnh của Masstel là giúp người Việt tiếp cận công nghệ thông minh với chi phí thấp, tạo dựng niềm tin và gắn kết lâu dài với khách hàng nội địa.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Masstel%20logo&imgurl=https%3A%2F%2Flaptopre.vn%2Fupload%2Fcategory%2Fimage-16232108282.png&imgrefurl=https%3A%2F%2Flaptopre.vn%2Fmay-tinh-bang-masstel%3Fsrsltid%3DAfmBOoo7OkA53HOqjZojaMcjL6QqlXjv68EeAvTCgqwN6xpBoxMzyNCh&docid=vHpZVbyLnOnETM&tbnid=MHQruigVpViXgM&vet=12ahUKEwjPsrvqy6-QAxWY4zgGHeC1FpUQM3oECBoQAA..i&w=400&h=260&hcb=2&ved=2ahUKEwjPsrvqy6-QAxWY4zgGHeC1FpUQM3oECBoQAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 8,
+      "brandName": "Nothing",
+      "brandDescription": "Nothing là thương hiệu công nghệ mới nổi, hướng đến thiết kế tối giản, độc đáo và trải nghiệm liền mạch giữa phần cứng và phần mềm. Nothing mong muốn phá vỡ các chuẩn mực thiết kế truyền thống, mang đến thiết bị 'cảm giác sống', nơi công nghệ không chỉ là công cụ mà là một phần của phong cách sống. Nothing chú trọng vật liệu, ánh sáng LED (Glyph), trải nghiệm người dùng tinh tế và tính cá nhân hóa. Hãng định hướng để mỗi sản phẩm không chỉ là công cụ mà là một tác phẩm công nghệ có hồn. Tầm nhìn của Nothing là trở thành thương hiệu dẫn đầu trào lưu thiết bị thông minh mang tính biểu tượng, nơi công nghệ hài hòa với thẩm mỹ, và người dùng cảm nhận được sự khác biệt ngay từ cái chạm đầu tiên.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Nothing%20logo&imgurl=https%3A%2F%2Fimages.indianexpress.com%2F2021%2F07%2FNothing-logo.jpg&imgrefurl=https%3A%2F%2Findianexpress.com%2Farticle%2Ftechnology%2Ftech-news-technology%2Fnothing-is-for-tech-that-fades-away-into-the-background-7425098%2F&docid=JxrtE0-Tdr3yJM&tbnid=i9bUGod7rgl3vM&vet=12ahUKEwinuo3yy6-QAxVq1DgGHY6UKcIQM3oECB0QAA..i&w=1200&h=667&hcb=2&ved=2ahUKEwinuo3yy6-QAxVq1DgGHY6UKcIQM3oECB0QAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 9,
+      "brandName": "Samsung",
+      "brandDescription": "Samsung là tập đoàn đa ngành lớn của Hàn Quốc, thành lập năm 1938, và từ những năm 1960 đã mở rộng vào ngành điện tử tiêu dùng. Trong lĩnh vực smartphone, Samsung nổi bật với dòng Galaxy, phủ nhiều phân khúc từ phổ thông đến cao cấp. Samsung đặt tôn chỉ đổi mới công nghệ, nỗ lực dẫn đầu màn hình (AMOLED, màn hình gập), camera, chip (Exynos), và hệ sinh thái Galaxy. Samsung cũng đầu tư mạnh vào nghiên cứu R&D và công nghệ tương lai như 5G, 6G, AI và robot. Tầm nhìn của Samsung là mang công nghệ tiên tiến đến mọi người, từ chiếc điện thoại phổ thông đến thiết bị cao cấp — đồng thời xây dựng hệ sinh thái mở, hỗ trợ liên kết giữa các thiết bị và dịch vụ.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Samsung%20logo&imgurl=https%3A%2F%2Fhienlaptop.com%2Fwp-content%2Fuploads%2F2024%2F12%2Flogo-samsung-vector-6.png&imgrefurl=https%3A%2F%2Fhienlaptop.com%2Ftai-ngay-10-mau-logo-samsung-vector-dep-nhat-dinh-dang-ai-eps-cdr-svg-png.html&docid=UFCb_nBLxAB-5M&tbnid=3mzPVqCsFsSmUM&vet=12ahUKEwjqtZ6CzK-QAxXi-TgGHfbSE98QM3oECBoQAA..i&w=1024&h=1024&hcb=2&ved=2ahUKEwjqtZ6CzK-QAxXi-TgGHfbSE98QM3oECBoQAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 10,
+      "brandName": "Xiaomi",
+      "brandDescription": "Xiaomi là thương hiệu công nghệ Trung Quốc được biết đến nhờ chiến lược 'giá tốt, cấu hình mạnh' và hệ sinh thái sản phẩm phong phú. Xiaomi không chỉ bán điện thoại mà còn xây dựng hệ sinh thái thiết bị thông minh giúp người dùng kết nối liền mạch. Xiaomi chú trọng tối ưu chi phí sản xuất, kiểm soát chuỗi cung ứng và tương tác cộng đồng người dùng (MIUI, forum, feedback). Hãng luôn thử nghiệm các công nghệ mới như AI, camera và màn hình. Tầm nhìn của Xiaomi là trở thành 'Apple của phương Đông' theo cách tiếp cận mở và đa dạng, giúp công nghệ cao dễ tiếp cận hơn với mọi người.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Xiaomi%20logo&imgurl=https%3A%2F%2Fcellphones.com.vn%2Fsforum%2Fwp-content%2Fuploads%2F2021%2F03%2FXiaomi-Mi-Logo.jpg&imgrefurl=https%3A%2F%2Fcellphones.com.vn%2Fsforum%2Fxiaomi-doi-logo-moi-trong-thi-don-gian-nhung-lai-ton-toi-7-ty-dong&docid=tXrMVr2czwsKuM&tbnid=iNKxEV2qSxsucM&vet=12ahUKEwjLz-qXzK-QAxXlyDgGHe6zPP0QM3oECBYQAA..i&w=1080&h=608&hcb=2&ved=2ahUKEwjLz-qXzK-QAxXlyDgGHe6zPP0QM3oECBYQAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 11,
+      "brandName": "Poco",
+      "brandDescription": "POCO khởi nguồn là một thương hiệu con của Xiaomi, nhưng sau đó phát triển riêng với định vị tập trung vào hiệu năng cao, giá tốt, dành cho người dùng thích hiệu năng, gaming và trải nghiệm vượt trội so với tầm giá. POCO nổi bật với các dòng sản phẩm tập trung vào chip mạnh, RAM lớn, hệ thống tối ưu để 'chạy mượt' và chiến game, đồng thời hạn chế những tính năng không cần thiết để giữ giá hợp lý. Tầm nhìn của POCO là trở thành lựa chọn lý tưởng cho những người dùng đòi hỏi cao nhưng không muốn chịu giá flagship, nơi hiệu năng là mục tiêu hàng đầu.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Poco%20logo&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F7%2F78%2FPoco_Smartphone_Company_logo.svg%2F2560px-Poco_Smartphone_Company_logo.svg.png&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3APoco_Smartphone_Company_logo.svg&docid=vmf_E9OEVjjFyM&tbnid=HitO4_cebhnIzM&vet=12ahUKEwjX3ZeozK-QAxXnwTgGHReUFcQQM3oECBgQAA..i&w=2560&h=1700&hcb=2&ved=2ahUKEwjX3ZeozK-QAxXnwTgGHReUFcQQM3oECBgQAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 12,
+      "brandName": "Vivo",
+      "brandDescription": "Vivo là thương hiệu smartphone Trung Quốc nổi bật với việc đầu tư mạnh vào camera, thiết kế mỏng, âm thanh và trải nghiệm người dùng trẻ trung. Vivo hướng đến phân khúc từ trung đến cao cấp, với các dòng sản phẩm nổi bật về selfie, video, màn hình cong hoặc gập. Vivo thường tích hợp các công nghệ mới như camera pop-up, cảm biến vân tay dưới màn hình và trải nghiệm AR/VR. Tầm nhìn của Vivo là kết hợp nghệ thuật và công nghệ để mang trải nghiệm hình ảnh, âm thanh đột phá cho người dùng, đồng thời xây dựng hệ sinh thái giải trí và kỹ thuật số riêng.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Vivo%20logo&imgurl=https%3A%2F%2Fwww.vivosmartphone.vn%2Fthemes%2Fvivo%2Fimg%2Fvivo-fb-page.png&imgrefurl=https%3A%2F%2Fwww.vivosmartphone.vn%2F&docid=ooU08T7fMXqY0M&tbnid=E56lzlTlklFx5M&vet=12ahUKEwjlmZC5zK-QAxV6xzgGHctyJmAQM3oECB4QAA..i&w=1200&h=600&hcb=2&ved=2ahUKEwjlmZC5zK-QAxV6xzgGHctyJmAQM3oECB4QAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 13,
+      "brandName": "Realme",
+      "brandDescription": "realme là thương hiệu có tinh thần trẻ trung, năng động và sáng tạo, ra mắt hướng đến thế hệ người dùng Gen Z. realme kết hợp thiết kế bắt mắt, cấu hình mạnh mẽ và giá hợp lý để tạo ra sản phẩm 'ngon, bổ, rẻ'. Thương hiệu thường tung ra sản phẩm mới nhanh, cập nhật công nghệ mới như camera AI, sạc nhanh, màn hình tần số cao. realme cũng chú trọng việc xây dựng cộng đồng người dùng trẻ, sáng tạo và năng động. Tầm nhìn của realme là trở thành thương hiệu dẫn đầu xu hướng, nơi công nghệ tiên tiến không bị giới hạn bởi giá, và giúp người dùng thể hiện cá tính qua thiết bị của mình.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Realme%20logo&imgurl=https%3A%2F%2Fcrystalpng.com%2Fwp-content%2Fuploads%2F2025%2F05%2Frealme_logo.png&imgrefurl=https%3A%2F%2Fcrystalpng.com%2Fproduct%2Frealme-logo%2F&docid=b9wwDauNZNmRhM&tbnid=aLXXUZSxdHleLM&vet=12ahUKEwjX0cHEzK-QAxXXxzgGHWT_FnEQM3oECB0QAA..i&w=1080&h=1080&hcb=2&ved=2ahUKEwjX0cHEzK-QAxXXxzgGHWT_FnEQM3oECB0QAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 14,
+      "brandName": "Honor",
+      "brandDescription": "Honor bắt đầu là dòng con của Huawei, sau đó tách ra hoạt động độc lập với mục tiêu tiếp cận người dùng trẻ và phân khúc tầm trung, cao cấp. Honor đặt trọng tâm vào thiết kế thời trang, hiệu năng cân đối và trải nghiệm ổn định. Hãng muốn cung cấp sản phẩm có tính 'smart lifestyle' — tích hợp công nghệ phù hợp với xu hướng như màn hình gập, camera cao cấp, AI và trải nghiệm 5G. Tầm nhìn của Honor là trở thành thương hiệu mang đến 'smart life' — nơi công nghệ đồng hành cùng phong cách sống hiện đại, năng động và sáng tạo.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Honor%20logo&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F2e%2FLOGO_Honor.pdf%2Fpage1-2000px-LOGO_Honor.pdf.jpg&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ALOGO_Honor.pdf&docid=IdfxdVdnzMxKCM&tbnid=hT1Kq4rPWjweZM&vet=12ahUKEwi54LjazK-QAxWLwzgGHZduAHEQM3oECBsQAA..i&w=2000&h=1125&hcb=2&ved=2ahUKEwi54LjazK-QAxWLwzgGHZduAHEQM3oECBsQAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 15,
+      "brandName": "Sony",
+      "brandDescription": "Sony là thương hiệu điện tử nổi tiếng của Nhật Bản, có bề dày truyền thống trong âm thanh, hình ảnh và giải trí — từ TV, máy ảnh đến thiết bị nghe nhạc. Trong lĩnh vực smartphone, Sony tập trung vào người dùng đam mê nhiếp ảnh, quay phim, nghe nhạc và trải nghiệm công nghệ tinh tế. Sony tận dụng thế mạnh cảm biến hình ảnh (Exmor), công nghệ âm thanh, xử lý video, và tích hợp với hệ sinh thái giải trí như PlayStation và camera Alpha. Tầm nhìn của Sony là mang đến trải nghiệm nghe, nhìn, cảm xúc toàn diện cho người dùng, nơi smartphone không đơn thuần là thiết bị mà là thiết bị giải trí cao cấp cá nhân.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Sony%20logo&imgurl=https%3A%2F%2Fwww.sony.com.vn%2Fimage%2Fa65d25160f409a2f8f23299be205450d%3Ffmt%3Djpeg%26wid%3D960%26qlt%3D43&imgrefurl=https%3A%2F%2Fwww.sony.com.vn%2Felectronics%2Fcorporate&docid=69QzZv9kiuqsPM&tbnid=eyF1vFfMujbiZM&vet=12ahUKEwjTsqvmzK-QAxV9yTgGHSFLKEsQM3oECBgQAA..i&w=960&h=583&hcb=2&ved=2ahUKEwjTsqvmzK-QAxV9yTgGHSFLKEsQM3oECBgQAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 16,
+      "brandName": "Nokia",
+      "brandDescription": "Nokia là thương hiệu di động có lịch sử lâu đời từ Phần Lan, từng là biểu tượng của độ bền và uy tín trong ngành điện thoại. Khi trở lại thị trường smartphone, Nokia tập trung vào thiết bị Android 'sạch', độ ổn định cao, cam kết cập nhật bảo mật và trải nghiệm người dùng trung thực. Nokia hợp tác với các hãng khác để tận dụng thiết kế, camera Zeiss và mạng 5G. Tầm nhìn của Nokia là trở thành lựa chọn đáng tin cậy trong thị trường smartphone, nơi người dùng tìm kiếm sự ổn định, an tâm và trải nghiệm tốt mà không bị ràng buộc vào hệ sinh thái phức tạp.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Nokia%20logo&imgurl=https%3A%2F%2Fwww.nokia.com%2Fsites%2Fdefault%2Ffiles%2F2023-02%2Fpekka-blog-header-image.jpg&imgrefurl=https%3A%2F%2Fwww.nokia.com%2Fblog%2Fthis-is-nokia%2F&docid=7LeiazbpnhnnLM&tbnid=PXiPy7p6y3nCsM&vet=12ahUKEwjjic7rzK-QAxWnyDgGHZDpDZcQM3oECBoQAA..i&w=942&h=381&hcb=2&ved=2ahUKEwjjic7rzK-QAxWnyDgGHZDpDZcQM3oECBoQAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 17,
+      "brandName": "Infinix",
+      "brandDescription": "Infinix là thương hiệu smartphone hướng đến các thị trường mới nổi như Đông Nam Á, châu Phi, Nam Á — nơi người dùng mong muốn thiết bị pin khỏe, thiết kế trẻ trung và hiệu năng hợp lý. Infinix nổi bật với các dòng pin dung lượng lớn, chế độ bảo vệ pin, camera trung bình khá nhưng ổn định, hỗ trợ nhiều tính năng AI trong phân khúc giá. Tầm nhìn của Infinix là giúp người dùng trẻ ở những thị trường tiềm năng trải nghiệm công nghệ tốt mà không phải trả giá quá cao — biến smartphone trở thành công cụ sáng tạo và kết nối.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Infinix%20logo&imgurl=https%3A%2F%2Fpnghdpro.com%2Fwp-content%2Fthemes%2Fpnghdpro%2Fdownload%2Fsocial-media-and-brands%2Finfinix-logo-hd.png&imgrefurl=https%3A%2F%2Fpnghdpro.com%2Finfinix-logo%2F&docid=OLxVtTokQeoXxM&tbnid=wz7pQ5ebSUb1oM&vet=12ahUKEwj_p-D2zK-QAxU-zTgGHd51BxYQM3oECBYQAA..i&w=1280&h=1280&hcb=2&ved=2ahUKEwj_p-D2zK-QAxU-zTgGHd51BxYQM3oECBYQAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 18,
+      "brandName": "Nubia",
+      "brandDescription": "Nubia là thương hiệu con của ZTE, tập trung vào thiết kế mạnh mẽ, gaming và công nghệ camera tiên tiến như zoom quang học, camera biến hình. Nubia theo đuổi việc tích hợp phần cứng mạnh, tối ưu phần mềm để phục vụ game thủ và người thích quay video hoặc nhiếp ảnh. Tầm nhìn của Nubia là trở thành thương hiệu smartphone được tạo ra cho trải nghiệm hình ảnh và hiệu năng, nơi thiết bị không chỉ dùng được mà còn mang lại cảm xúc mạnh mẽ cho người dùng.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Nubia%20logo&imgurl=https%3A%2F%2Fstatic.beebom.com%2Fwp-content%2Fuploads%2F2020%2F04%2Fnubia-new-logo.jpg%3Fw%3D750%26quality%3D75&imgrefurl=https%3A%2F%2Fbeebom.com%2Fnubia-new-brand-logo-smart-lifestyle-products%2F&docid=QBi2Y0BRmd4u9M&tbnid=wrjwat5KpYdIHM&vet=12ahUKEwiCi_CCza-QAxXVxTgGHZpnPEkQM3oECBcQAA..i&w=750&h=500&hcb=2&ved=2ahUKEwiCi_CCza-QAxXVxTgGHZpnPEkQM3oECBcQAA",
+      "brandStatus": true
+    },
+    {
+      "brandId": 19,
+      "brandName": "Tecno",
+      "brandDescription": "Tecno là thương hiệu smartphone nhắm đến thị trường mới nổi, cung cấp thiết bị giá rẻ tới trung cấp với cấu hình đủ dùng, camera hỗ trợ AI và pin dung lượng lớn. Trong nhiều thị trường, Tecno tập trung vào trải nghiệm chụp ảnh đêm, tối ưu cho mạng di động, hỗ trợ đa SIM và dịch vụ sau bán tại địa phương. Tầm nhìn của Tecno là mang công nghệ thông minh đến mọi người — không để sự hạn hẹp về ngân sách là rào cản trong việc trải nghiệm smartphone hiện đại và tiện ích.",
+      "brandLogoUrl": "https://www.google.com/imgres?q=Tecno%20logo&imgurl=https%3A%2F%2Fcdn.vectorstock.com%2Fi%2F500p%2F43%2F46%2Ftecno-brand-logo-vector-46234346.jpg&imgrefurl=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vectors%2Ftecno-mobile-vectors&docid=DAYSec5GTEedfM&tbnid=txki5faMa1EJIM&vet=12ahUKEwiQhPuIza-QAxV_yTgGHUUhJOUQM3oECBkQAA..i&w=615&h=500&hcb=2&ved=2ahUKEwiQhPuIza-QAxV_yTgGHUUhJOUQM3oECBkQAA",
+      "brandStatus": true
+    }
+  ],
+  "cart": {
+    "items": [
+      {
+        "ciId": 1,
+        "ciProductVariant": {
+          "prodvId": 1,
+          "prodvProduct": 1,
+          "prodvName": "Samsung Galaxy A34 5G 8GB 128GB",
+          "prodvModel": "samsung-galaxy-a",
+          "prodvVersion": "A36",
+          "prodvColor": "Bạc",
+          "prodvImage": {
+            "imageId": "1",
+            "imageName": "Samsung Galaxy A34 5G 8GB 128GB-bạc.jpg",
+            "imageData": "https://cdn2.cellphones.com.vn/insecure/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-a34_1__1.jpg"
+          },
+          "prodvPrice": {
+            "ppId": 82,
+            "ppPrice": 5890000,
+            "ppPriceStatus": "ACTIVE",
+            "ppStartDate": "2025-09-22",
+            "ppEndDate": null,
+            "ppProduct": 82
+          }
+        },
+        "ciQuantity": 2
+      }
+    ]
+  }
 }

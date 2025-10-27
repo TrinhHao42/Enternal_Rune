@@ -4,12 +4,14 @@ import { Star, ShoppingCart, Shield, Truck, Clock, Plus, Minus } from 'lucide-re
 import { Product } from '@/types/Product'
 import { formatPrice } from '@/lib/format'
 import { colors } from '@/lib/color'
+import { useCart } from '@/context/CartContext'
 
 interface ProductInfoPanelProps {
     product: Product
 }
 
 export default function ProductInfoPanel({ product }: ProductInfoPanelProps) {
+    const { addCartItem } = useCart()
     const [selectedColor, setSelectedColor] = useState(product.prodColor[0] || 'Black')
     const [quantity, setQuantity] = useState(1)
     const storageOptions = ['256GB', '512GB', '1TB']
@@ -236,6 +238,7 @@ export default function ProductInfoPanel({ product }: ProductInfoPanelProps) {
                 </button>
                 <button
                     className="cursor-pointer bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-6 rounded-2xl font-semibold text-md shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center gap-3 group hover:scale-102"
+                    onClick={() => addCartItem(product)}
                 >
                     <ShoppingCart className="w-6 h-6 group-hover:scale-110 transition-transform" />
                     <span>Thêm vào giỏ hàng</span>

@@ -33,6 +33,7 @@ public class SePayServiceImpl implements SePayService {
     private TransactionRepository transactionRepository;
 
     public QRCodeResponse getQRCode(BigDecimal amount, String description) throws IOException {
+    public QRCodeResponse getQRCode(BigDecimal amount, String description) throws IOException {
         String url = generateQRURL.getQRURL(qrConfig, amount, description);
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<byte[]> response = restTemplate.getForEntity(url, byte[].class);
@@ -48,18 +49,15 @@ public class SePayServiceImpl implements SePayService {
         return orderRepository.checkOrderStatusById(id);
     }
 
-    public boolean sePayWebHook(TransactionRequest transactionRequest) {
+    public TransactionRequest sePayWebHook(TransactionRequest transactionRequest) {
         Transaction newTransaction = new Transaction();
 
         newTransaction.setTransGateway(transactionRequest.getGateway());
         newTransaction.setTransDate(transactionRequest.getTransactionDate().toLocalDate());
         newTransaction.setTransAccountNumber(transactionRequest.getAccountNumber());
-        newTransaction.setTransSubAccount(transactionRequest.getSubAccount());
-        newTransaction.setTransCode(transactionRequest.getCode());
         newTransaction.setTransContent(transactionRequest.getContent());
         newTransaction.setTransReferenceNumber(transactionRequest.getReferenceCode());
         newTransaction.setTransBody(transactionRequest.getDescription());
-        newTransaction.setTransAccumulated(transactionRequest.getAccumulated());
         newTransaction.setTransCreatedAt(transactionRequest.getTransactionDate().toLocalDate());
 
         if (transactionRequest.getTransferType().equals("in")) {
@@ -69,12 +67,14 @@ public class SePayServiceImpl implements SePayService {
             newTransaction.setTransAmountOut(transactionRequest.getTransferAmount());
         }
 
-        Transaction transactionSaved = transactionRepository.save(newTransaction);
+//        Transaction transactionSaved = transactionRepository.save(newTransaction);
+//
+//        int row = 0;
+//        if (transactionSaved != null) {
+//            row = orderRepository.updateOrderStatusByID(transactionSaved.getTransId(), transactionSaved.getTransAmountIn(), PaymentStatus.PAID, PaymentStatus.PENDING);
+//        }
 
-        int row = 0;
-        row = orderRepository.updateOrderStatusByID(transactionSaved.getTransId(), transactionSaved.getTransAmountIn(), PaymentStatus.PAID, PaymentStatus.PENDING);
-
-        return row > 0;
+        return transactionRequest;
     }
 
     public Order createOrder(Order orderInformation) {
